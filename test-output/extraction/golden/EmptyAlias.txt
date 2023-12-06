@@ -1,0 +1,26 @@
+DatatypeStructure
+  { mapping =
+      ElmMapping
+        { typeName = "EmptyAlias"
+        , moduleName = Just "Codegen.SampleTypes"
+        , encoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "encodeEmptyAlias"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , decoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "decodeEmptyAlias"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , args = []
+        , isTypeAlias = True
+        }
+  , nParams = 0
+  , constructors =
+      [ Constructor
+          { constructorName = "EmptyAlias" , constructorFields = [] }
+      ]
+  }

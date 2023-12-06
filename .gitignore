@@ -1,0 +1,3 @@
+test-output/**/actual/*
+test-app/index.html
+test-app/src/Codegen/*

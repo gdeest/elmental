@@ -1,0 +1,2529 @@
+DatatypeStructure
+  { mapping =
+      ElmMapping
+        { typeName = "LargeRecord"
+        , moduleName = Just "Codegen.SampleTypes"
+        , encoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "encodeLargeRecord"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , decoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "decodeLargeRecord"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , args = []
+        , isTypeAlias = False
+        }
+  , nParams = 1
+  , constructors =
+      [ Constructor
+          { constructorName = "LargeRecord"
+          , constructorFields =
+              [ ( Just "field0"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field1"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field2"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field3"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field4"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field5"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field6"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field7"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field8"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field9"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field10"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field11"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field12"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field13"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field14"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field15"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field16"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field17"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field18"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field19"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field20"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field21"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field22"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field23"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field24"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field25"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field26"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field27"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field28"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field29"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field30"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field31"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field32"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field33"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field34"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field35"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field36"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field37"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field38"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field39"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field40"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field41"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field42"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field43"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field44"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field45"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field46"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field47"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field48"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field49"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field50"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field51"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field52"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field53"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field54"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field55"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field56"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field57"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field58"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field59"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field60"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field61"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field62"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field63"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field64"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field65"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field66"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field67"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field68"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field69"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field70"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field71"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field72"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field73"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field74"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field75"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field76"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field77"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field78"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field79"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field80"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field81"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field82"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field83"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field84"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field85"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field86"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field87"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field88"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field89"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field90"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field91"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field92"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field93"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field94"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field95"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field96"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field97"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field98"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              , ( Just "field99"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "LookMaNoPhantomParam"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeNatPhantomParameter"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              ]
+          }
+      ]
+  }

@@ -1,0 +1,128 @@
+DatatypeStructure
+  { mapping =
+      ElmMapping
+        { typeName = "SimpleRecord"
+        , moduleName = Just "Codegen.SampleTypes"
+        , encoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "encodeSimpleRecord"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , decoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "decodeSimpleRecord"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , args = []
+        , isTypeAlias = False
+        }
+  , nParams = 0
+  , constructors =
+      [ Constructor
+          { constructorName = "SimpleRecord"
+          , constructorFields =
+              [ ( Just "name"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "PolymorphicRecursiveType"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodePolymorphicRecursiveType"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodePolymorphicRecursiveType"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs =
+                        [ TyRef
+                            { tyCon =
+                                TyMapping
+                                  ElmMapping
+                                    { typeName = "SimpleType"
+                                    , moduleName = Just "Codegen.SampleTypes"
+                                    , encoderLocation =
+                                        Just
+                                          SymbolLocation
+                                            { symbolName = "encodeSimpleType"
+                                            , symbolModuleName = "Codegen.SampleTypes"
+                                            }
+                                    , decoderLocation =
+                                        Just
+                                          SymbolLocation
+                                            { symbolName = "decodeSimpleType"
+                                            , symbolModuleName = "Codegen.SampleTypes"
+                                            }
+                                    , args = []
+                                    , isTypeAlias = False
+                                    }
+                            , tyArgs = []
+                            }
+                        ]
+                    }
+                )
+              , ( Just "age"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "SimpleType"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeSimpleType"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeSimpleType"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = []
+                    }
+                )
+              , ( Just "country"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "CountryCode"
+                            , moduleName = Just "Codegen.CountryCode"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeCountryCode"
+                                    , symbolModuleName = "Codegen.CountryCode"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeCountryCode"
+                                    , symbolModuleName = "Codegen.CountryCode"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = []
+                    }
+                )
+              ]
+          }
+      ]
+  }

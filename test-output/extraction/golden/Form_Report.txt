@@ -1,0 +1,119 @@
+DatatypeStructure
+  { mapping =
+      ElmMapping
+        { typeName = "Form"
+        , moduleName = Just "Codegen.Report"
+        , encoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "encodeForm" , symbolModuleName = "Codegen.Report" }
+        , decoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "decodeForm" , symbolModuleName = "Codegen.Report" }
+        , args = []
+        , isTypeAlias = False
+        }
+  , nParams = 0
+  , constructors =
+      [ Constructor
+          { constructorName = "Form"
+          , constructorFields =
+              [ ( Just "userName"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "Maybe"
+                            , moduleName = Just "Maybe"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "maybe"
+                                    , symbolModuleName = "Json.Encode.Extra"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "nullable" , symbolModuleName = "Json.Decode" }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs =
+                        [ TyRef
+                            { tyCon =
+                                TyMapping
+                                  ElmMapping
+                                    { typeName = "String"
+                                    , moduleName = Nothing
+                                    , encoderLocation =
+                                        Just
+                                          SymbolLocation
+                                            { symbolName = "string"
+                                            , symbolModuleName = "Json.Encode"
+                                            }
+                                    , decoderLocation =
+                                        Just
+                                          SymbolLocation
+                                            { symbolName = "string"
+                                            , symbolModuleName = "Json.Decode"
+                                            }
+                                    , args = []
+                                    , isTypeAlias = False
+                                    }
+                            , tyArgs = []
+                            }
+                        ]
+                    }
+                )
+              , ( Just "upload"
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "Maybe"
+                            , moduleName = Just "Maybe"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "maybe"
+                                    , symbolModuleName = "Json.Encode.Extra"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "nullable" , symbolModuleName = "Json.Decode" }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs =
+                        [ TyRef
+                            { tyCon =
+                                TyMapping
+                                  ElmMapping
+                                    { typeName = "FileUpload"
+                                    , moduleName = Just "Codegen.Report"
+                                    , encoderLocation =
+                                        Just
+                                          SymbolLocation
+                                            { symbolName = "encodeFileUpload"
+                                            , symbolModuleName = "Codegen.Report"
+                                            }
+                                    , decoderLocation =
+                                        Just
+                                          SymbolLocation
+                                            { symbolName = "decodeFileUpload"
+                                            , symbolModuleName = "Codegen.Report"
+                                            }
+                                    , args = []
+                                    , isTypeAlias = False
+                                    }
+                            , tyArgs = []
+                            }
+                        ]
+                    }
+                )
+              ]
+          }
+      ]
+  }

@@ -1,0 +1,97 @@
+DatatypeStructure
+  { mapping =
+      ElmMapping
+        { typeName = "HKTWithSpecializedKindStarParams"
+        , moduleName = Just "Codegen.SampleTypes"
+        , encoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "encodeHKTWithSpecializedKindStarParams"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , decoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "decodeHKTWithSpecializedKindStarParams"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , args = []
+        , isTypeAlias = False
+        }
+  , nParams = 0
+  , constructors =
+      [ Constructor
+          { constructorName = "HKTWithSpecializedKindStarParams"
+          , constructorFields =
+              [ ( Nothing
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "String"
+                            , moduleName = Nothing
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "string" , symbolModuleName = "Json.Encode" }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "string" , symbolModuleName = "Json.Decode" }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = []
+                    }
+                )
+              , ( Nothing
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "Maybe"
+                            , moduleName = Just "Maybe"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "maybe"
+                                    , symbolModuleName = "Json.Encode.Extra"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "nullable" , symbolModuleName = "Json.Decode" }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs =
+                        [ TyRef
+                            { tyCon =
+                                TyMapping
+                                  ElmMapping
+                                    { typeName = "Int"
+                                    , moduleName = Nothing
+                                    , encoderLocation =
+                                        Just
+                                          SymbolLocation
+                                            { symbolName = "int"
+                                            , symbolModuleName = "Json.Encode"
+                                            }
+                                    , decoderLocation =
+                                        Just
+                                          SymbolLocation
+                                            { symbolName = "int"
+                                            , symbolModuleName = "Json.Decode"
+                                            }
+                                    , args = []
+                                    , isTypeAlias = False
+                                    }
+                            , tyArgs = []
+                            }
+                        ]
+                    }
+                )
+              ]
+          }
+      ]
+  }

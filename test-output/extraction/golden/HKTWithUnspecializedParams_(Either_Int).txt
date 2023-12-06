@@ -1,0 +1,174 @@
+DatatypeStructure
+  { mapping =
+      ElmMapping
+        { typeName = "HKTWithUnspecializedParams"
+        , moduleName = Just "Codegen.SampleTypes"
+        , encoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "encodeHKTWithUnspecializedParams"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , decoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "decodeHKTWithUnspecializedParams"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , args = []
+        , isTypeAlias = False
+        }
+  , nParams = 2
+  , constructors =
+      [ Constructor
+          { constructorName = "HKTWithUnspecializedParams"
+          , constructorFields =
+              [ ( Nothing
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "Either"
+                            , moduleName = Just "Codegen.Either"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodeEither"
+                                    , symbolModuleName = "Codegen.Either"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodeEither"
+                                    , symbolModuleName = "Codegen.Either"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs =
+                        [ TyRef
+                            { tyCon =
+                                TyMapping
+                                  ElmMapping
+                                    { typeName = "Int"
+                                    , moduleName = Nothing
+                                    , encoderLocation =
+                                        Just
+                                          SymbolLocation
+                                            { symbolName = "int"
+                                            , symbolModuleName = "Json.Encode"
+                                            }
+                                    , decoderLocation =
+                                        Just
+                                          SymbolLocation
+                                            { symbolName = "int"
+                                            , symbolModuleName = "Json.Decode"
+                                            }
+                                    , args = []
+                                    , isTypeAlias = False
+                                    }
+                            , tyArgs = []
+                            }
+                        , TyRef
+                            { tyCon =
+                                TyMapping
+                                  ElmMapping
+                                    { typeName = "Either"
+                                    , moduleName = Just "Codegen.Either"
+                                    , encoderLocation =
+                                        Just
+                                          SymbolLocation
+                                            { symbolName = "encodeEither"
+                                            , symbolModuleName = "Codegen.Either"
+                                            }
+                                    , decoderLocation =
+                                        Just
+                                          SymbolLocation
+                                            { symbolName = "decodeEither"
+                                            , symbolModuleName = "Codegen.Either"
+                                            }
+                                    , args = []
+                                    , isTypeAlias = False
+                                    }
+                            , tyArgs =
+                                [ TyRef
+                                    { tyCon =
+                                        TyMapping
+                                          ElmMapping
+                                            { typeName = "Int"
+                                            , moduleName = Nothing
+                                            , encoderLocation =
+                                                Just
+                                                  SymbolLocation
+                                                    { symbolName = "int"
+                                                    , symbolModuleName = "Json.Encode"
+                                                    }
+                                            , decoderLocation =
+                                                Just
+                                                  SymbolLocation
+                                                    { symbolName = "int"
+                                                    , symbolModuleName = "Json.Decode"
+                                                    }
+                                            , args = []
+                                            , isTypeAlias = False
+                                            }
+                                    , tyArgs = []
+                                    }
+                                , TyRef
+                                    { tyCon =
+                                        TyMapping
+                                          ElmMapping
+                                            { typeName = "Either"
+                                            , moduleName = Just "Codegen.Either"
+                                            , encoderLocation =
+                                                Just
+                                                  SymbolLocation
+                                                    { symbolName = "encodeEither"
+                                                    , symbolModuleName = "Codegen.Either"
+                                                    }
+                                            , decoderLocation =
+                                                Just
+                                                  SymbolLocation
+                                                    { symbolName = "decodeEither"
+                                                    , symbolModuleName = "Codegen.Either"
+                                                    }
+                                            , args = []
+                                            , isTypeAlias = False
+                                            }
+                                    , tyArgs =
+                                        [ TyRef
+                                            { tyCon =
+                                                TyMapping
+                                                  ElmMapping
+                                                    { typeName = "Int"
+                                                    , moduleName = Nothing
+                                                    , encoderLocation =
+                                                        Just
+                                                          SymbolLocation
+                                                            { symbolName = "int"
+                                                            , symbolModuleName = "Json.Encode"
+                                                            }
+                                                    , decoderLocation =
+                                                        Just
+                                                          SymbolLocation
+                                                            { symbolName = "int"
+                                                            , symbolModuleName = "Json.Decode"
+                                                            }
+                                                    , args = []
+                                                    , isTypeAlias = False
+                                                    }
+                                            , tyArgs = []
+                                            }
+                                        , TyRef { tyCon = TyVar "a0" , tyArgs = [] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                )
+              , ( Nothing , TyRef { tyCon = TyVar "a1" , tyArgs = [] } )
+              ]
+          }
+      ]
+  }

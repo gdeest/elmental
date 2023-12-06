@@ -1,0 +1,50 @@
+DatatypeStructure
+  { mapping =
+      ElmMapping
+        { typeName = "SimpleType"
+        , moduleName = Just "Codegen.SampleTypes"
+        , encoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "encodeSimpleType"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , decoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "decodeSimpleType"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , args = []
+        , isTypeAlias = False
+        }
+  , nParams = 0
+  , constructors =
+      [ Constructor
+          { constructorName = "SimpleType"
+          , constructorFields =
+              [ ( Nothing
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "Int"
+                            , moduleName = Nothing
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "int" , symbolModuleName = "Json.Encode" }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "int" , symbolModuleName = "Json.Decode" }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = []
+                    }
+                )
+              ]
+          }
+      ]
+  }

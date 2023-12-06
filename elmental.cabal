@@ -1,0 +1,75 @@
+cabal-version:      3.0
+
+name:               elmental
+version:            0.1.0.0
+
+synopsis:
+    Generate Elm datatype definitions, encoders and decoders from Haskell datatypes. Carefully organize them into modules.
+
+homepage:           https://github.com/withflint/monorepo
+author:             Gaël Deest
+
+category:           Codegen
+
+extra-source-files: CHANGELOG.md
+
+common warnings
+    ghc-options:
+      -- force all warnings to be on and selectively disable some
+      -Weverything
+      -Wno-unticked-promoted-constructors
+      -Wno-unsafe
+      -Wno-missing-import-lists
+      -Wno-implicit-prelude
+      -Wno-missing-safe-haskell-mode
+      -Wno-missing-deriving-strategies
+      -Wno-missing-local-signatures
+      -Wno-monomorphism-restriction
+      -Wno-safe
+      -Wno-all-missed-specialisations
+      -Wno-missing-kind-signatures
+      -Wno-ambiguous-fields
+      -Wno-missing-export-lists
+      -Wunused-packages
+
+library
+    import: warnings
+    hs-source-dirs:   src
+    default-language: GHC2021
+    ghc-options:      -O0
+
+    exposed-modules:  Elmental
+                      Elmental.ElmStructure
+                      Elmental.Generate
+ 
+    build-depends:    base >=4.16.4.0 && < 5.0,
+                      containers,
+                      directory,
+                      filepath,
+                      kind-generics,
+                      text,
+                      neat-interpolation,
+
+
+test-suite elmental-test
+    import: warnings
+    hs-source-dirs:   test
+    default-language: GHC2021
+    ghc-options:      -O0
+
+    type:             exitcode-stdio-1.0
+    main-is:          Main.hs
+
+    other-modules:    Codegen.SampleTypes
+    build-depends:    base >=4.16.4.0 && < 5.0,
+                      base64-bytestring-type,
+                      country-codes,
+                      containers,
+                      directory,
+                      elmental,
+                      process,
+                      text,
+                      kind-generics-th,
+                      hspec,
+                      hspec-golden,
+                      pretty-show

@@ -1,0 +1,57 @@
+DatatypeStructure
+  { mapping =
+      ElmMapping
+        { typeName = "PolymorphicRecursiveType"
+        , moduleName = Just "Codegen.SampleTypes"
+        , encoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "encodePolymorphicRecursiveType"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , decoderLocation =
+            Just
+              SymbolLocation
+                { symbolName = "decodePolymorphicRecursiveType"
+                , symbolModuleName = "Codegen.SampleTypes"
+                }
+        , args = []
+        , isTypeAlias = False
+        }
+  , nParams = 1
+  , constructors =
+      [ Constructor
+          { constructorName = "SPRTNil" , constructorFields = [] }
+      , Constructor
+          { constructorName = "SPRTCons"
+          , constructorFields =
+              [ ( Nothing , TyRef { tyCon = TyVar "a0" , tyArgs = [] } )
+              , ( Nothing
+                , TyRef
+                    { tyCon =
+                        TyMapping
+                          ElmMapping
+                            { typeName = "PolymorphicRecursiveType"
+                            , moduleName = Just "Codegen.SampleTypes"
+                            , encoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "encodePolymorphicRecursiveType"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , decoderLocation =
+                                Just
+                                  SymbolLocation
+                                    { symbolName = "decodePolymorphicRecursiveType"
+                                    , symbolModuleName = "Codegen.SampleTypes"
+                                    }
+                            , args = []
+                            , isTypeAlias = False
+                            }
+                    , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
+                    }
+                )
+              ]
+          }
+      ]
+  }

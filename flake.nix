@@ -16,6 +16,10 @@
         hsPkgs = pkgs.haskellPackages;
         elmentalPkg = (hsPkgs.callCabal2nix "elmental" (./.) {}).overrideAttrs (oldAttrs: {
           buildInputs = oldAttrs.buildInputs ++ [ pkgs.elmPackages.elm ];
+          checkPhase = ''
+            export HOME=$(mktemp -d)
+            ${oldAttrs.checkPhase}
+          '';
         });
       in
       {

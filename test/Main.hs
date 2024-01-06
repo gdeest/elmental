@@ -334,8 +334,7 @@ generationSpec = do
     mkCodegenTest sampleTypes "SampleTypes"
 
 generate :: IO ()
-generate = generateAll "./" sampleTypes
-
+generate = generateAll "src" sampleTypes
 
 main :: IO ()
 main = do

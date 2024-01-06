@@ -16,6 +16,7 @@
         };
 
         hsPkgs = pkgs.haskellPackages;
+
         elmentalPkg = (hsPkgs.callCabal2nix "elmental" (./.) {}).overrideAttrs (oldAttrs: {
           buildInputs = oldAttrs.buildInputs ++ [ pkgs.elmPackages.elm ];
           checkPhase = ''
@@ -23,6 +24,26 @@
             ${oldAttrs.checkPhase}
           '';
         });
+
+        generated-code = pkgs.stdenv.mkDerivation {
+          name = "generated-code";
+          buildInputs = [ elmentalPkg ];
+
+          buildPhase = ''
+            # Assuming the executable creates a directory
+            ${elmentalPkg}/bin/generate-test-app-code # This runs the executable
+          '';
+
+          installPhase = ''
+            mkdir -p $out
+            cp -r * $out/
+          '';
+
+          meta = {
+            description = "Generated code for test-app";
+          };
+        };
+
       in
       {
         devShell = pkgs.haskellPackages.shellFor {
@@ -39,7 +60,13 @@
         packages.test-app = pkgs.mkElmDerivation {
           pname = "elm-app";
           version = "0.1.0";
-          src = ./test-app;
+          src = pkgs.symlinkJoin {
+              name = "test-app-src";
+              paths = [
+                ./test-app
+                generated-code
+              ];
+            };
           outputJavaScript = false;
         };
       }

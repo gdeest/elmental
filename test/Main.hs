@@ -306,26 +306,26 @@ extractionSpec = do
     mkExtractionTest @(Form 'Report) "Form_Report"
 
 
-sampleTypes :: [SomeStructure]
-sampleTypes =
-  [ include @SimpleType
-  , include @SimpleRecord
-  , include @SimpleRecordAlias
-  , include @EmptyAlias
-  , include @MonomorphicRecursiveType
-  , include @PolymorphicRecursiveType
-  , include @(SimpleHKT Maybe)
-  , include @(HKTWithSpecializedKindStarParams Int Text Maybe)
-  , include @(HKTWithUnspecializedParams (Either Int))
-  , include @(NatPhantomParameter 3)
-  , include @RecordWithMultipleConstructors
-  , include @LargeRecord
-  , include @Either
-  , include @(FileUpload 'Submission)
-  , include @(FileUpload 'Report)
-  , include @(Form 'Submission)
-  , include @(Form 'Report)
-  ]
+-- sampleTypes :: [SomeStructure]
+-- sampleTypes =
+--   [ include @SimpleType
+--   , include @SimpleRecord
+--   , include @SimpleRecordAlias
+--   , include @EmptyAlias
+--   , include @MonomorphicRecursiveType
+--   , include @PolymorphicRecursiveType
+--   , include @(SimpleHKT Maybe)
+--   , include @(HKTWithSpecializedKindStarParams Int Text Maybe)
+--   , include @(HKTWithUnspecializedParams (Either Int))
+--   , include @(NatPhantomParameter 3)
+--   , include @RecordWithMultipleConstructors
+--   , include @LargeRecord
+--   , include @Either
+--   , include @(FileUpload 'Submission)
+--   , include @(FileUpload 'Report)
+--   , include @(Form 'Submission)
+--   , include @(Form 'Report)
+--   ]
 
 
 generationSpec :: Spec

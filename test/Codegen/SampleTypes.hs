@@ -13,6 +13,7 @@ module Codegen.SampleTypes where
 
 import Data.Kind (Type)
 import Data.Text (Text)
+import Elmental.Generate (SomeStructure)
 import GHC.TypeLits (Nat)
 import Generics.Kind.TH (deriveGenericK)
 
@@ -206,3 +207,24 @@ $(deriveGenericK ''Form)
 $(deriveGenericK ''Bool)
 $(deriveGenericK ''Maybe)
 $(deriveGenericK ''Either)
+
+sampleTypes :: [SomeStructure]
+sampleTypes =
+  [ include @SimpleType
+  , include @SimpleRecord
+  , include @SimpleRecordAlias
+  , include @EmptyAlias
+  , include @MonomorphicRecursiveType
+  , include @PolymorphicRecursiveType
+  , include @(SimpleHKT Maybe)
+  , include @(HKTWithSpecializedKindStarParams Int Text Maybe)
+  , include @(HKTWithUnspecializedParams (Either Int))
+  , include @(NatPhantomParameter 3)
+  , include @RecordWithMultipleConstructors
+  , include @LargeRecord
+  , include @Either
+  , include @(FileUpload 'Submission)
+  , include @(FileUpload 'Report)
+  , include @(Form 'Submission)
+  , include @(Form 'Report)
+  ]

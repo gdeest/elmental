@@ -30,26 +30,6 @@
           cd $out
           ${elmentalPkg}/bin/generate-test-app-code
         '';
-        # generated-code = pkgs.stdenv.mkDerivation {
-        #   name = "generated-code";
-        #   buildInputs = [ elmentalPkg ];
-
-        #   src = pkgs.runCommand "dummy-src" {} "mkdir -p $out";;
-
-        #   buildPhase = ''
-        #     # Assuming the executable creates a directory
-        #     ${elmentalPkg}/bin/generate-test-app-code # This runs the executable
-        #   '';
-
-        #   installPhase = ''
-        #     mkdir -p $out
-        #     cp -r * $out/
-        #   '';
-
-        #   meta = {
-        #     description = "Generated code for test-app";
-        #   };
-        # };
 
       in
       {
@@ -72,7 +52,7 @@
               name = "test-app-src";
               paths = [
                 ./test-app
-                "${generated-code}"
+                generated-code
               ];
             };
           outputJavaScript = false;

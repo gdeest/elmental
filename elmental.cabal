@@ -78,7 +78,7 @@ executable generate-test-app-code
     default-language: GHC2021
     ghc-options:      -O0
 
-    main-is:          Generate.hs
+    main-is:          GenerateMain.hs
 
     other-modules:    Codegen.SampleTypes
     build-depends:    base >=4.16.4.0 && < 5.0,

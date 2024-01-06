@@ -5,6 +5,7 @@
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE TypeApplications #-}
 {-# LANGUAGE TypeFamilies #-}
+{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE UndecidableInstances #-}
 {-# OPTIONS_GHC -Wno-orphans #-}
 {-# OPTIONS_GHC -Wno-partial-fields #-}
@@ -13,7 +14,8 @@ module Codegen.SampleTypes where
 
 import Data.Kind (Type)
 import Data.Text (Text)
-import Elmental.Generate (SomeStructure)
+import Elmental.Generate (SomeStructure, include)
+import Elmental
 import GHC.TypeLits (Nat)
 import Generics.Kind.TH (deriveGenericK)
 
@@ -228,3 +230,188 @@ sampleTypes =
   , include @(Form 'Submission)
   , include @(Form 'Report)
   ]
+
+
+
+instance ElmDeclarable Type SimpleType
+instance ElmDeclarable Type SimpleRecord
+instance ElmDeclarable Type RecordWithMultipleConstructors
+instance ElmDeclarable Type MonomorphicRecursiveType
+instance ElmDeclarable (Type -> Type) PolymorphicRecursiveType
+instance (ElmDeclarable (Type -> Type) f, HasSymbolInfo f) => ElmDeclarable Type (SimpleHKT f) where
+  mapTo =
+    (defaultMapping @(SimpleHKT f))
+      { typeName = "SimpleHKT" <> getTypeName @f
+      }
+
+
+instance ElmDeclarable Type (HKTWithSpecializedKindStarParams Int Text Maybe)
+instance ElmDeclarable (Type -> Type -> Type) (HKTWithUnspecializedParams (Either Int))
+
+
+instance ElmDeclarable (Type -> Type) (NatPhantomParameter n) where
+  mapTo =
+    (defaultMapping @(NatPhantomParameter n))
+      { typeName = "LookMaNoPhantomParam"
+      }
+
+
+instance ElmDeclarable (Type -> Type) LargeRecord
+
+
+instance ElmDeclarable Type Int where
+  mapTo =
+    ElmMapping
+      { typeName = "Int"
+      , moduleName = Nothing
+      , decoderLocation =
+          Just $
+            SymbolLocation
+              { symbolName = "int"
+              , symbolModuleName = "Json.Decode"
+              }
+      , encoderLocation =
+          Just $
+            SymbolLocation
+              { symbolName = "int"
+              , symbolModuleName = "Json.Encode"
+              }
+      , args = []
+      , isTypeAlias = False
+      , urlPiece = Nothing
+      , queryParam = Nothing
+      }
+
+
+instance ElmDeclarable Type Text where
+  mapTo =
+    ElmMapping
+      { typeName = "String"
+      , moduleName = Nothing
+      , decoderLocation =
+          Just $
+            SymbolLocation
+              { symbolName = "string"
+              , symbolModuleName = "Json.Decode"
+              }
+      , encoderLocation =
+          Just $
+            SymbolLocation
+              { symbolName = "string"
+              , symbolModuleName = "Json.Encode"
+              }
+      , args = []
+      , isTypeAlias = False
+      , urlPiece = Nothing
+      , queryParam = Nothing
+      }
+
+
+instance ElmDeclarable Type [Char] where
+  mapTo = mapTo @_ @Text
+
+
+instance ElmDeclarable Type Bool where
+  mapTo =
+    ElmMapping
+      { typeName = "Bool"
+      , moduleName = Nothing
+      , decoderLocation =
+          Just $
+            SymbolLocation
+              { symbolName = "bool"
+              , symbolModuleName = "Json.Decode"
+              }
+      , encoderLocation =
+          Just $
+            SymbolLocation
+              { symbolName = "bool"
+              , symbolModuleName = "Json.Encode"
+              }
+      , args = []
+      , isTypeAlias = False
+      , urlPiece = Nothing
+      , queryParam = Nothing
+      }
+
+
+instance ElmDeclarable (Type -> Type) Maybe where
+  mapTo =
+    ElmMapping
+      { typeName = "Maybe"
+      , moduleName = Just "Maybe"
+      , decoderLocation =
+          Just $
+            SymbolLocation
+              { symbolName = "nullable"
+              , symbolModuleName = "Json.Decode"
+              }
+      , encoderLocation =
+          Just $
+            SymbolLocation
+              { symbolName = "maybe"
+              , symbolModuleName = "Json.Encode.Extra"
+              }
+      , args = []
+      , isTypeAlias = False
+      , urlPiece = Nothing
+      , queryParam = Nothing
+      }
+
+
+instance ElmDeclarable (Type -> Type -> Type) Either where
+  mapTo = setModule "Codegen.Either" (defaultMapping @Either)
+
+
+instance ElmDeclarable (Type -> Type) [] where
+  mapTo =
+    ElmMapping
+      { typeName = "List"
+      , moduleName = Nothing
+      , decoderLocation =
+          Just $
+            SymbolLocation
+              { symbolName = "list"
+              , symbolModuleName = "Json.Decode"
+              }
+      , encoderLocation =
+          Just $
+            SymbolLocation
+              { symbolName = "list"
+              , symbolModuleName = "Json.Encode"
+              }
+      , args = []
+      , isTypeAlias = False
+      , urlPiece = Nothing
+      , queryParam = Nothing
+      }
+
+
+instance ElmDeclarable Type (Form 'Submission) where
+  mapTo = setModule "Codegen.Submission" (defaultMapping @(Form 'Submission))
+
+
+instance ElmDeclarable Type (Form 'Report) where
+  mapTo = setModule "Codegen.Report" (defaultMapping @(Form 'Report))
+
+
+instance ElmDeclarable Type (FileUpload 'Submission) where
+  mapTo = setModule "Codegen.Submission" (defaultMapping @(FileUpload 'Submission))
+
+
+instance ElmDeclarable Type (FileUpload 'Report) where
+  mapTo = setModule "Codegen.Report" (defaultMapping @(FileUpload 'Report))
+
+
+instance ElmDeclarable Type SimpleRecordAlias where
+  mapTo =
+    (defaultMapping @SimpleRecordAlias)
+      { isTypeAlias = True
+      }
+
+
+instance ElmDeclarable Type EmptyAlias where
+  mapTo =
+    (defaultMapping @EmptyAlias)
+      { isTypeAlias = True
+      }

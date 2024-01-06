@@ -26,10 +26,15 @@
         devShell = pkgs.haskellPackages.shellFor {
           packages = p: [elmentalPkg];
           withHoogle = true;
-          buildInputs = [ pkgs.cabal-install pkgs.elmPackages.elm ];
+          buildInputs = [
+            pkgs.cabal-install
+            pkgs.elm2nix
+            pkgs.elmPackages.elm
+          ];
         };
 
         packages.elmental = elmentalPkg;
+        packages.test-app = pkgs.callPackage ./test-app {};
       }
     );
 }

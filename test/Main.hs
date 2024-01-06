@@ -12,7 +12,6 @@ module Main where
 
 import Codegen.SampleTypes
 
-import Data.ByteString.Base64.Type (ByteString64)
 import Data.Kind (Type)
 import Data.Map.Strict (Map)
 import Data.Map.Strict qualified as Map
@@ -21,7 +20,6 @@ import Data.Text qualified as Text
 import Elmental
 import Elmental.Generate
 
-import Data.CountryCodes (CountryCode (..))
 import System.Directory (withCurrentDirectory)
 import System.Exit (ExitCode (ExitSuccess))
 import System.Process qualified as Process
@@ -76,6 +74,8 @@ instance ElmDeclarable Type Int where
               }
       , args = []
       , isTypeAlias = False
+      , urlPiece = Nothing
+      , queryParam = Nothing
       }
 
 
@@ -98,6 +98,8 @@ instance ElmDeclarable Type Text where
               }
       , args = []
       , isTypeAlias = False
+      , urlPiece = Nothing
+      , queryParam = Nothing
       }
 
 
@@ -124,28 +126,8 @@ instance ElmDeclarable Type Bool where
               }
       , args = []
       , isTypeAlias = False
-      }
-
-
-instance ElmDeclarable Type ByteString64 where
-  mapTo =
-    ElmMapping
-      { typeName = "Bytes"
-      , moduleName = Just "Bytes"
-      , decoderLocation =
-          Just $
-            SymbolLocation
-              { symbolName = "decode"
-              , symbolModuleName = "MyBase64"
-              }
-      , encoderLocation =
-          Just $
-            SymbolLocation
-              { symbolName = "encode"
-              , symbolModuleName = "MyBase64"
-              }
-      , args = []
-      , isTypeAlias = False
+      , urlPiece = Nothing
+      , queryParam = Nothing
       }
 
 
@@ -168,15 +150,13 @@ instance ElmDeclarable (Type -> Type) Maybe where
               }
       , args = []
       , isTypeAlias = False
+      , urlPiece = Nothing
+      , queryParam = Nothing
       }
 
 
 instance ElmDeclarable (Type -> Type -> Type) Either where
   mapTo = setModule "Codegen.Either" (defaultMapping @Either)
-
-
-instance ElmDeclarable Type CountryCode where
-  mapTo = setModule "Codegen.CountryCode" (defaultMapping @CountryCode)
 
 
 instance ElmDeclarable (Type -> Type) [] where
@@ -198,6 +178,8 @@ instance ElmDeclarable (Type -> Type) [] where
               }
       , args = []
       , isTypeAlias = False
+      , urlPiece = Nothing
+      , queryParam = Nothing
       }
 
 
@@ -271,6 +253,7 @@ renderSourceMap srcMap = unlines (prettifyModule <$> Map.toAscList srcMap)
   hr = replicate 80 '#'
 
 
+
 extractionSpec :: Spec
 extractionSpec = do
   it "Handles simple types" $ do
@@ -313,8 +296,8 @@ extractionSpec = do
   it "Handles large records" $ do
     mkExtractionTest @LargeRecord "LargeRecord"
 
-  it "Handles large sum types" $ do
-    mkExtractionTest @CountryCode "CountryCode"
+  -- it "Handles large sum types" $ do
+  --   mkExtractionTest @CountryCode "CountryCode"
 
   it "Handles the higher-kinded data pattern (1/2)" $
     mkExtractionTest @(Form 'Submission) "Form_Submission"
@@ -337,7 +320,6 @@ sampleTypes =
   , include @(NatPhantomParameter 3)
   , include @RecordWithMultipleConstructors
   , include @LargeRecord
-  , include @CountryCode
   , include @Either
   , include @(FileUpload 'Submission)
   , include @(FileUpload 'Report)

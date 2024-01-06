@@ -17,6 +17,8 @@ DatatypeStructure
                 }
         , args = []
         , isTypeAlias = False
+        , urlPiece = Nothing
+        , queryParam = Nothing
         }
   , nParams = 0
   , constructors =
@@ -40,6 +42,8 @@ DatatypeStructure
                                     { symbolName = "int" , symbolModuleName = "Json.Decode" }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = []
                     }

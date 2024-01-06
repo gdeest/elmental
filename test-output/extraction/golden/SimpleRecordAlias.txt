@@ -17,6 +17,8 @@ DatatypeStructure
                 }
         , args = []
         , isTypeAlias = True
+        , urlPiece = Nothing
+        , queryParam = Nothing
         }
   , nParams = 0
   , constructors =
@@ -44,6 +46,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs =
                         [ TyRef
@@ -66,6 +70,8 @@ DatatypeStructure
                                             }
                                     , args = []
                                     , isTypeAlias = False
+                                    , urlPiece = Nothing
+                                    , queryParam = Nothing
                                     }
                             , tyArgs = []
                             }
@@ -93,31 +99,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
-                            }
-                    , tyArgs = []
-                    }
-                )
-              , ( Just "country"
-                , TyRef
-                    { tyCon =
-                        TyMapping
-                          ElmMapping
-                            { typeName = "CountryCode"
-                            , moduleName = Just "Codegen.CountryCode"
-                            , encoderLocation =
-                                Just
-                                  SymbolLocation
-                                    { symbolName = "encodeCountryCode"
-                                    , symbolModuleName = "Codegen.CountryCode"
-                                    }
-                            , decoderLocation =
-                                Just
-                                  SymbolLocation
-                                    { symbolName = "decodeCountryCode"
-                                    , symbolModuleName = "Codegen.CountryCode"
-                                    }
-                            , args = []
-                            , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = []
                     }

@@ -17,6 +17,8 @@ DatatypeStructure
                 }
         , args = []
         , isTypeAlias = False
+        , urlPiece = Nothing
+        , queryParam = Nothing
         }
   , nParams = 1
   , constructors =
@@ -40,6 +42,8 @@ DatatypeStructure
                                     { symbolName = "list" , symbolModuleName = "Json.Decode" }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }

@@ -17,6 +17,8 @@ DatatypeStructure
                 }
         , args = []
         , isTypeAlias = False
+        , urlPiece = Nothing
+        , queryParam = Nothing
         }
   , nParams = 0
   , constructors =
@@ -42,6 +44,8 @@ DatatypeStructure
                                     { symbolName = "nullable" , symbolModuleName = "Json.Decode" }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs =
                         [ TyRef
@@ -64,6 +68,8 @@ DatatypeStructure
                                             }
                                     , args = []
                                     , isTypeAlias = False
+                                    , urlPiece = Nothing
+                                    , queryParam = Nothing
                                     }
                             , tyArgs = []
                             }

@@ -7,7 +7,6 @@
 module SampleTypes where
 
 
-import Data.CountryCodes (CountryCode(..))
 import Data.Text (Text)
 import Generics.Kind.TH (deriveGenericK)
 import GHC.TypeLits (Nat)
@@ -172,7 +171,6 @@ $(deriveGenericK ''NatPhantomParameter)
 $(deriveGenericK ''LargeRecord)
 
 -- Datatypes defined elsewhere
-$(deriveGenericK ''CountryCode)
 $(deriveGenericK ''Bool)
 $(deriveGenericK ''Maybe)
 $(deriveGenericK ''Either)

@@ -17,6 +17,8 @@ DatatypeStructure
                 }
         , args = []
         , isTypeAlias = False
+        , urlPiece = Nothing
+        , queryParam = Nothing
         }
   , nParams = 1
   , constructors =
@@ -44,6 +46,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -69,6 +73,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -94,6 +100,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -119,6 +127,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -144,6 +154,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -169,6 +181,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -194,6 +208,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -219,6 +235,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -244,6 +262,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -269,6 +289,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -294,6 +316,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -319,6 +343,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -344,6 +370,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -369,6 +397,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -394,6 +424,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -419,6 +451,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -444,6 +478,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -469,6 +505,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -494,6 +532,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -519,6 +559,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -544,6 +586,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -569,6 +613,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -594,6 +640,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -619,6 +667,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -644,6 +694,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -669,6 +721,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -694,6 +748,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -719,6 +775,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -744,6 +802,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -769,6 +829,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -794,6 +856,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -819,6 +883,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -844,6 +910,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -869,6 +937,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -894,6 +964,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -919,6 +991,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -944,6 +1018,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -969,6 +1045,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -994,6 +1072,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1019,6 +1099,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1044,6 +1126,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1069,6 +1153,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1094,6 +1180,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1119,6 +1207,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1144,6 +1234,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1169,6 +1261,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1194,6 +1288,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1219,6 +1315,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1244,6 +1342,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1269,6 +1369,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1294,6 +1396,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1319,6 +1423,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1344,6 +1450,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1369,6 +1477,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1394,6 +1504,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1419,6 +1531,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1444,6 +1558,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1469,6 +1585,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1494,6 +1612,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1519,6 +1639,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1544,6 +1666,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1569,6 +1693,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1594,6 +1720,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1619,6 +1747,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1644,6 +1774,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1669,6 +1801,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1694,6 +1828,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1719,6 +1855,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1744,6 +1882,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1769,6 +1909,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1794,6 +1936,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1819,6 +1963,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1844,6 +1990,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1869,6 +2017,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1894,6 +2044,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1919,6 +2071,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1944,6 +2098,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1969,6 +2125,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -1994,6 +2152,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2019,6 +2179,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2044,6 +2206,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2069,6 +2233,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2094,6 +2260,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2119,6 +2287,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2144,6 +2314,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2169,6 +2341,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2194,6 +2368,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2219,6 +2395,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2244,6 +2422,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2269,6 +2449,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2294,6 +2476,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2319,6 +2503,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2344,6 +2530,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2369,6 +2557,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2394,6 +2584,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2419,6 +2611,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2444,6 +2638,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2469,6 +2665,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2494,6 +2692,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }
@@ -2519,6 +2719,8 @@ DatatypeStructure
                                     }
                             , args = []
                             , isTypeAlias = False
+                            , urlPiece = Nothing
+                            , queryParam = Nothing
                             }
                     , tyArgs = [ TyRef { tyCon = TyVar "a0" , tyArgs = [] } ]
                     }

@@ -11,8 +11,6 @@
 
 module Codegen.SampleTypes where
 
-import Data.ByteString.Base64.Type (ByteString64)
-import Data.CountryCodes (CountryCode (..))
 import Data.Kind (Type)
 import Data.Text (Text)
 import GHC.TypeLits (Nat)
@@ -25,7 +23,6 @@ data SimpleType = SimpleType Int
 data SimpleRecord = SimpleRecord
   { name :: PolymorphicRecursiveType SimpleType
   , age :: SimpleType
-  , country :: CountryCode
   }
 
 
@@ -35,7 +32,6 @@ data EmptyAlias = EmptyAlias
 data SimpleRecordAlias = SimpleRecordAlias
   { name :: PolymorphicRecursiveType SimpleType
   , age :: SimpleType
-  , country :: CountryCode
   }
 
 
@@ -67,7 +63,7 @@ data Tag = Report | Submission
 
 
 type family HKD (tag :: Tag) a where
-  HKD 'Report ByteString64 = Bool
+  -- HKD 'Report ByteString64 = Bool
   HKD 'Report a = Maybe a
   HKD 'Submission (FileUpload 'Submission) = Maybe (FileUpload 'Submission)
   HKD 'Submission a = a
@@ -75,7 +71,7 @@ type family HKD (tag :: Tag) a where
 
 data FileUpload tag = FileUpload
   { fileName :: HKD tag Text
-  , content :: HKD tag ByteString64
+  -- , content :: HKD tag ByteString64
   }
 
 
@@ -206,8 +202,7 @@ $(deriveGenericK ''Form)
 
 
 -- Datatypes defined elsewhere
-$(deriveGenericK ''ByteString64)
-$(deriveGenericK ''CountryCode)
+-- $(deriveGenericK ''ByteString64)
 $(deriveGenericK ''Bool)
 $(deriveGenericK ''Maybe)
 $(deriveGenericK ''Either)

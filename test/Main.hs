@@ -333,12 +333,15 @@ generationSpec = do
   it "Generates modules for user types" $ do
     mkCodegenTest sampleTypes "SampleTypes"
 
+generate :: IO ()
+generate = generateAll "./" sampleTypes
+
 
 main :: IO ()
 main = do
   hspec extractionSpec
   hspec generationSpec
-  generateAll "test-app/src" sampleTypes
-  withCurrentDirectory "test-app/" $ do
-    ExitSuccess <- Process.rawSystem "elm" ["make", "src/Main.elm"]
-    pure ()
+  -- generateAll "test-app/src" sampleTypes
+  -- withCurrentDirectory "test-app/" $ do
+  --   ExitSuccess <- Process.rawSystem "elm" ["make", "src/Main.elm"]
+  --   pure ()

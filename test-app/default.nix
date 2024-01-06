@@ -1,8 +1,4 @@
-{ nixpkgs ? <nixpkgs>
-, config ? {}
-}:
-
-with (import nixpkgs config);
+{ stdenv, ... }:
 
 let
   mkDerivation =

@@ -4,13 +4,15 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    mkElmDerivation.url = github:jeslie0/mkElmDerivation;
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, flake-utils, mkElmDerivation }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
-          inherit system;
+            overlays = [ mkElmDerivation.overlays.mkElmDerivation ];
+            inherit system;
         };
 
         hsPkgs = pkgs.haskellPackages;
@@ -34,7 +36,12 @@
         };
 
         packages.elmental = elmentalPkg;
-        packages.test-app = pkgs.callPackage ./test-app {};
+        packages.test-app = pkgs.mkElmDerivation {
+          pname = "elm-app";
+          version = "0.1.0";
+          src = ./test-app;
+          outputJavaScript = false;
+        };
       }
     );
 }

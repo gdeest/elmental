@@ -71,3 +71,23 @@ test-suite elmental-test
                       hspec,
                       hspec-golden,
                       pretty-show
+
+executable generate-test-app-code
+    import: warnings
+    hs-source-dirs:   test
+    default-language: GHC2021
+    ghc-options:      -O0
+
+    main-is:          Generate.hs
+
+    other-modules:    Codegen.SampleTypes
+    build-depends:    base >=4.16.4.0 && < 5.0,
+                      containers,
+                      directory,
+                      elmental,
+                      process,
+                      text,
+                      kind-generics-th,
+                      hspec,
+                      hspec-golden,
+                      pretty-show

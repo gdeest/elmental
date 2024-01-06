@@ -25,24 +25,31 @@
           '';
         });
 
-        generated-code = pkgs.stdenv.mkDerivation {
-          name = "generated-code";
-          buildInputs = [ elmentalPkg ];
+        generated-code = pkgs.runCommand "generated-code" {} ''
+          mkdir -p $out
+          cd $out
+          ${elmentalPkg}/bin/generate-test-app-code
+        '';
+        # generated-code = pkgs.stdenv.mkDerivation {
+        #   name = "generated-code";
+        #   buildInputs = [ elmentalPkg ];
 
-          buildPhase = ''
-            # Assuming the executable creates a directory
-            ${elmentalPkg}/bin/generate-test-app-code # This runs the executable
-          '';
+        #   src = pkgs.runCommand "dummy-src" {} "mkdir -p $out";;
 
-          installPhase = ''
-            mkdir -p $out
-            cp -r * $out/
-          '';
+        #   buildPhase = ''
+        #     # Assuming the executable creates a directory
+        #     ${elmentalPkg}/bin/generate-test-app-code # This runs the executable
+        #   '';
 
-          meta = {
-            description = "Generated code for test-app";
-          };
-        };
+        #   installPhase = ''
+        #     mkdir -p $out
+        #     cp -r * $out/
+        #   '';
+
+        #   meta = {
+        #     description = "Generated code for test-app";
+        #   };
+        # };
 
       in
       {
@@ -57,6 +64,7 @@
         };
 
         packages.elmental = elmentalPkg;
+        packages.genCode = generated-code;
         packages.test-app = pkgs.mkElmDerivation {
           pname = "elm-app";
           version = "0.1.0";
@@ -64,7 +72,7 @@
               name = "test-app-src";
               paths = [
                 ./test-app
-                generated-code
+                "${generated-code}"
               ];
             };
           outputJavaScript = false;

@@ -1,3 +1,8 @@
 test-output/**/actual/*
 test-app/index.html
 test-app/src/Codegen/*
+test-app/elm-stuff/
+dist-newstyle/
+**/result
+**/result/
+

@@ -28,111 +28,103 @@ import Test.Hspec.Golden
 
 import Text.Show.Pretty (ppShow)
 
-
-
-
-mkExtractionTest :: forall {k} x. HasElmStructure k x => String -> Golden String
+mkExtractionTest :: forall {k} x. (HasElmStructure k x) => String -> Golden String
 mkExtractionTest name =
-  Golden
-    { output = ppShow $ getElmStructure @x
-    , encodePretty = id
-    , writeToFile = writeFile
-    , readFromFile = readFile
-    , goldenFile = "test-output/extraction/golden/" <> name <> ".txt"
-    , actualFile = Just $ "test-output/extraction/actual/" <> name <> ".txt"
-    , failFirstTime = True
-    }
-
+    Golden
+        { output = ppShow $ getElmStructure @x
+        , encodePretty = id
+        , writeToFile = writeFile
+        , readFromFile = readFile
+        , goldenFile = "test-output/extraction/golden/" <> name <> ".txt"
+        , actualFile = Just $ "test-output/extraction/actual/" <> name <> ".txt"
+        , failFirstTime = True
+        }
 
 mkCodegenTest :: [SomeStructure] -> String -> Golden String
 mkCodegenTest typs name =
-  Golden
-    { output = renderSourceMap $ mkSourceMap typs
-    , encodePretty = id
-    , writeToFile = writeFile
-    , readFromFile = readFile
-    , goldenFile = "test-output/codegen/golden/" <> name <> ".txt"
-    , actualFile = Just $ "test-output/codegen/actual/" <> name <> ".txt"
-    , failFirstTime = True
-    }
-
+    Golden
+        { output = renderSourceMap $ mkSourceMap typs
+        , encodePretty = id
+        , writeToFile = writeFile
+        , readFromFile = readFile
+        , goldenFile = "test-output/codegen/golden/" <> name <> ".txt"
+        , actualFile = Just $ "test-output/codegen/actual/" <> name <> ".txt"
+        , failFirstTime = True
+        }
 
 renderSourceMap :: Map ModuleName Text -> String
 renderSourceMap srcMap = unlines (prettifyModule <$> Map.toAscList srcMap)
- where
-  prettifyModule (mName, src) =
-    unlines
-      [ hr
-      , Text.unpack mName <> ": "
-      , hr
-      , Text.unpack src
-      , hr
-      ]
-  hr = replicate 80 '#'
-
-
+  where
+    prettifyModule (mName, src) =
+        unlines
+            [ hr
+            , Text.unpack mName <> ": "
+            , hr
+            , Text.unpack src
+            , hr
+            ]
+    hr = replicate 80 '#'
 
 extractionSpec :: Spec
-extractionSpec = do
-  it "Handles simple types" $ do
-    mkExtractionTest @SimpleType "SimpleType"
+extractionSpec = it "Extraction" $ do
+    it "Handles simple types" $ do
+        mkExtractionTest @SimpleType "SimpleType"
 
-  it "Handles simple records" $ do
-    mkExtractionTest @SimpleRecord "SimpleRecord"
+    it "Handles simple records" $ do
+        mkExtractionTest @SimpleRecord "SimpleRecord"
 
-  it "Handles simple record aliases" $ do
-    mkExtractionTest @SimpleRecordAlias "SimpleRecordAlias"
+    it "Handles simple record aliases" $ do
+        mkExtractionTest @SimpleRecordAlias "SimpleRecordAlias"
 
-  it "Handles empty aliases" $ do
-    mkExtractionTest @EmptyAlias "EmptyAlias"
+    it "Handles empty aliases" $ do
+        mkExtractionTest @EmptyAlias "EmptyAlias"
 
-  it "Handles records with several constructors" $ do
-    mkExtractionTest @RecordWithMultipleConstructors "RecordWithMultipleConstructors"
+    it "Handles records with several constructors" $ do
+        mkExtractionTest @RecordWithMultipleConstructors "RecordWithMultipleConstructors"
 
-  it "Handles monomorphic recursive types" $ do
-    mkExtractionTest @MonomorphicRecursiveType "MonomorphicRecursiveType"
+    it "Handles monomorphic recursive types" $ do
+        mkExtractionTest @MonomorphicRecursiveType "MonomorphicRecursiveType"
 
-  it "Handles polymorphic recursive types" $ do
-    mkExtractionTest @PolymorphicRecursiveType "PolymorphicRecursiveType"
+    it "Handles polymorphic recursive types" $ do
+        mkExtractionTest @PolymorphicRecursiveType "PolymorphicRecursiveType"
 
-  it "Handles specialized simple HKTs" $ do
-    mkExtractionTest @(SimpleHKT Maybe) "SimpleHKT_Maybe"
+    it "Handles specialized simple HKTs" $ do
+        mkExtractionTest @(SimpleHKT Maybe) "SimpleHKT_Maybe"
 
-  it "Handles HKTs with other specialized type variables" $ do
-    mkExtractionTest
-      @(HKTWithSpecializedKindStarParams Int Text Maybe)
-      "HKTWithSpecializedKindStarparams_Int_Text_Maybe"
+    it "Handles HKTs with other specialized type variables" $ do
+        mkExtractionTest
+            @(HKTWithSpecializedKindStarParams Int Text Maybe)
+            "HKTWithSpecializedKindStarparams_Int_Text_Maybe"
 
-  it "Handles HKTs with unspecialized type variables" $ do
-    mkExtractionTest
-      @(HKTWithUnspecializedParams (Either Int))
-      "HKTWithUnspecializedParams_(Either_Int)"
+    it "Handles HKTs with unspecialized type variables" $ do
+        mkExtractionTest
+            @(HKTWithUnspecializedParams (Either Int))
+            "HKTWithUnspecializedParams_(Either_Int)"
 
-  it "Happily ignores phantom parameters of non Type kind" $ do
-    mkExtractionTest @(NatPhantomParameter 3) "NatPhantomparameter_3"
+    it "Happily ignores phantom parameters of non Type kind" $ do
+        mkExtractionTest @(NatPhantomParameter 3) "NatPhantomparameter_3"
 
-  it "Handles large records" $ do
-    mkExtractionTest @LargeRecord "LargeRecord"
+    it "Handles large records" $ do
+        mkExtractionTest @LargeRecord "LargeRecord"
 
-  -- it "Handles large sum types" $ do
-  --   mkExtractionTest @CountryCode "CountryCode"
+    -- it "Handles large sum types" $ do
+    --   mkExtractionTest @CountryCode "CountryCode"
 
-  it "Handles the higher-kinded data pattern (1/2)" $
-    mkExtractionTest @(Form 'Submission) "Form_Submission"
+    it "Handles the higher-kinded data pattern (1/2)" $
+        mkExtractionTest @(Form 'Submission) "Form_Submission"
 
-  it "Handles the higher-kinded data pattern (2/2)" $
-    mkExtractionTest @(Form 'Report) "Form_Report"
-
+    it "Handles the higher-kinded data pattern (2/2)" $
+        mkExtractionTest @(Form 'Report) "Form_Report"
 
 generationSpec :: Spec
-generationSpec = do
-  it "Generates modules for user types" $ do
-    mkCodegenTest sampleTypes "SampleTypes"
+generationSpec = it "Generation" $ do
+    it "Generates modules for user types" $ do
+        mkCodegenTest sampleTypes "SampleTypes"
 
 generate :: IO ()
 generate = generateAll "src" sampleTypes
 
 main :: IO ()
-main = do
-  hspec extractionSpec
-  hspec generationSpec
+main = hspec $ do
+    it "Generation" $ do extractionSpec
+    it "Extraction" $ do generationSpec

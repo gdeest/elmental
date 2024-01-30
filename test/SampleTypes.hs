@@ -6,21 +6,20 @@
 
 module SampleTypes where
 
-
 import Data.Text (Text)
-import Generics.Kind.TH (deriveGenericK)
 import GHC.TypeLits (Nat)
+import Generics.Kind.TH (deriveGenericK)
 
 data SimpleType = SimpleType Int
 
 data SimpleRecord = SimpleRecord
-  { name :: Text
-  , age :: SimpleType
-  }
+    { name :: Text
+    , age :: SimpleType
+    }
 
 data RecordWithMultipleConstructors
-  = FirstRecordConstructor { foo :: Bool }
-  | SecondRecordConstructor { bar :: Maybe Int }
+    = FirstRecordConstructor {foo :: Bool}
+    | SecondRecordConstructor {bar :: Maybe Int}
 
 data MonomorphicRecursiveType = SMRTNil | SMRTCons Int MonomorphicRecursiveType
 
@@ -30,8 +29,8 @@ data SimpleHKT (f :: * -> *) = SimpleHKT (f Int)
 
 data HKTWithSpecializedKindStarParams a b f = HKTWithSpecializedKindStarParams b (f a)
 
-data HKTWithUnspecializedParams (f :: * -> *) (a :: *) (b :: *) =
-    HKTWithUnspecializedParams (f (f (f a))) b
+data HKTWithUnspecializedParams (f :: * -> *) (a :: *) (b :: *)
+    = HKTWithUnspecializedParams (f (f (f a))) b
 
 data NatPhantomParameter (n :: Nat) a = NatPhantomParameter [a]
 

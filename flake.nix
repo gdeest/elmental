@@ -11,13 +11,13 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
-            overlays = [ mkElmDerivation.overlays.mkElmDerivation ];
-            inherit system;
+          overlays = [ mkElmDerivation.overlays.mkElmDerivation ];
+          inherit system;
         };
 
         hsPkgs = pkgs.haskellPackages;
 
-        elmentalPkg = (hsPkgs.callCabal2nix "elmental" (./.) {}).overrideAttrs (oldAttrs: {
+        elmentalPkg = (hsPkgs.callCabal2nix "elmental" (./.) { }).overrideAttrs (oldAttrs: {
           buildInputs = oldAttrs.buildInputs ++ [ pkgs.elmPackages.elm ];
           checkPhase = ''
             export HOME=$(mktemp -d)
@@ -25,7 +25,7 @@
           '';
         });
 
-        generated-code = pkgs.runCommand "generated-code" {} ''
+        generated-code = pkgs.runCommand "generated-code" { } ''
           mkdir -p $out
           cd $out
           ${elmentalPkg}/bin/generate-test-app-code
@@ -34,12 +34,16 @@
       in
       {
         devShell = pkgs.haskellPackages.shellFor {
-          packages = p: [elmentalPkg];
+          packages = p: [ elmentalPkg ];
           withHoogle = true;
           buildInputs = [
             pkgs.cabal-install
             pkgs.elm2nix
             pkgs.elmPackages.elm
+            pkgs.elmPackages.elm-format
+            pkgs.haskellPackages.fourmolu
+            pkgs.nixpkgs-fmt
+            pkgs.treefmt
           ];
         };
 
@@ -49,12 +53,12 @@
           pname = "elm-app";
           version = "0.1.0";
           src = pkgs.symlinkJoin {
-              name = "test-app-src";
-              paths = [
-                ./test-app
-                generated-code
-              ];
-            };
+            name = "test-app-src";
+            paths = [
+              ./test-app
+              generated-code
+            ];
+          };
           outputJavaScript = false;
         };
       }

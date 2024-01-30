@@ -1,27 +1,33 @@
 module Main exposing (..)
 
 import Browser
-import Html exposing (..)
+import Codegen.Report
 import Codegen.SampleTypes
 import Codegen.Submission
-import Codegen.Report
+import Html exposing (..)
+
 
 main =
-  Browser.sandbox { init = init, view = view, update = update }
+    Browser.sandbox { init = init, view = view, update = update }
+
 
 type alias Model =
-  String 
+    String
+
 
 init =
-  "hello, world!"
+    "hello, world!"
 
-type Msg 
-  = NoOp
+
+type Msg
+    = NoOp
+
 
 update msg model =
-  case msg of
-    NoOp ->
-      model
+    case msg of
+        NoOp ->
+            model
+
 
 view model =
-  div [] [ text model ] 
+    div [] [ text model ]

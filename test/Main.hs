@@ -66,7 +66,7 @@ renderSourceMap srcMap = unlines (prettifyModule <$> Map.toAscList srcMap)
     hr = replicate 80 '#'
 
 extractionSpec :: Spec
-extractionSpec = it "Extraction" $ do
+extractionSpec = describe "Extraction" $ do
     it "Handles simple types" $ do
         mkExtractionTest @SimpleType "SimpleType"
 
@@ -107,8 +107,8 @@ extractionSpec = it "Extraction" $ do
     it "Handles large records" $ do
         mkExtractionTest @LargeRecord "LargeRecord"
 
-    -- it "Handles large sum types" $ do
-    --   mkExtractionTest @CountryCode "CountryCode"
+    it "Handles large sum types" $ do
+        mkExtractionTest @CountryCode "CountryCode"
 
     it "Handles the higher-kinded data pattern (1/2)" $
         mkExtractionTest @(Form 'Submission) "Form_Submission"
@@ -117,7 +117,7 @@ extractionSpec = it "Extraction" $ do
         mkExtractionTest @(Form 'Report) "Form_Report"
 
 generationSpec :: Spec
-generationSpec = it "Generation" $ do
+generationSpec = describe "Generation" $ do
     it "Generates modules for user types" $ do
         mkCodegenTest sampleTypes "SampleTypes"
 
@@ -126,5 +126,5 @@ generate = generateAll "src" sampleTypes
 
 main :: IO ()
 main = hspec $ do
-    it "Generation" $ do extractionSpec
-    it "Extraction" $ do generationSpec
+    extractionSpec
+    generationSpec

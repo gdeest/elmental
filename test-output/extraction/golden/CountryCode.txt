@@ -2,21 +2,23 @@ DatatypeStructure
   { mapping =
       ElmMapping
         { typeName = "CountryCode"
-        , moduleName = Just "Codegen.CountryCode"
+        , moduleName = Just "Data.CountryCode"
         , encoderLocation =
             Just
               SymbolLocation
                 { symbolName = "encodeCountryCode"
-                , symbolModuleName = "Codegen.CountryCode"
+                , symbolModuleName = "Data.CountryCode"
                 }
         , decoderLocation =
             Just
               SymbolLocation
                 { symbolName = "decodeCountryCode"
-                , symbolModuleName = "Codegen.CountryCode"
+                , symbolModuleName = "Data.CountryCode"
                 }
         , args = []
         , isTypeAlias = False
+        , urlPiece = Nothing
+        , queryParam = Nothing
         }
   , nParams = 0
   , constructors =

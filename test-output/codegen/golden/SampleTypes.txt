@@ -907,3 +907,782 @@ decodeFileUpload  =
   in Json.Decode.field "contents" (Json.Decode.map FileUpload contentDecoder)
 ################################################################################
 
+################################################################################
+Data.CountryCode: 
+################################################################################
+module Data.CountryCode exposing (..)
+
+
+import Json.Encode
+import Json.Encode exposing (Value)
+import Json.Decode
+import Json.Decode exposing (Decoder)
+import Json.Decode.Extra exposing (andMap)
+
+
+type CountryCode 
+  = AD
+  | AE
+  | AF
+  | AG
+  | AI
+  | AL
+  | AM
+  | AO
+  | AQ
+  | AR
+  | AS
+  | AT
+  | AU
+  | AW
+  | AX
+  | AZ
+  | BA
+  | BB
+  | BD
+  | BE
+  | BF
+  | BG
+  | BH
+  | BI
+  | BJ
+  | BL
+  | BM
+  | BN
+  | BO
+  | BQ
+  | BR
+  | BS
+  | BT
+  | BV
+  | BW
+  | BY
+  | BZ
+  | CA
+  | CC
+  | CD
+  | CF
+  | CG
+  | CH
+  | CI
+  | CK
+  | CL
+  | CM
+  | CN
+  | CO
+  | CR
+  | CU
+  | CV
+  | CW
+  | CX
+  | CY
+  | CZ
+  | DE
+  | DJ
+  | DK
+  | DM
+  | DO
+  | DZ
+  | EC
+  | EE
+  | EG
+  | EH
+  | ER
+  | ES
+  | ET
+  | FI
+  | FJ
+  | FK
+  | FM
+  | FO
+  | FR
+  | GA
+  | GB
+  | GD
+  | GE
+  | GF
+  | GG
+  | GH
+  | GI
+  | GL
+  | GM
+  | GN
+  | GP
+  | GQ
+  | GR
+  | GS
+  | GT
+  | GU
+  | GW
+  | GY
+  | HK
+  | HM
+  | HN
+  | HR
+  | HT
+  | HU
+  | ID
+  | IE
+  | IL
+  | IM
+  | IN
+  | IO
+  | IQ
+  | IR
+  | IS
+  | IT
+  | JE
+  | JM
+  | JO
+  | JP
+  | KE
+  | KG
+  | KH
+  | KI
+  | KM
+  | KN
+  | KP
+  | KR
+  | KW
+  | KY
+  | KZ
+  | LA
+  | LB
+  | LC
+  | LI
+  | LK
+  | LR
+  | LS
+  | LT
+  | LU
+  | LV
+  | LY
+  | MA
+  | MC
+  | MD
+  | ME
+  | MF
+  | MG
+  | MH
+  | MK
+  | ML
+  | MM
+  | MN
+  | MO
+  | MP
+  | MQ
+  | MR
+  | MS
+  | MT
+  | MU
+  | MV
+  | MW
+  | MX
+  | MY
+  | MZ
+  | NA
+  | NC
+  | NE
+  | NF
+  | NG
+  | NI
+  | NL
+  | NO
+  | NP
+  | NR
+  | NU
+  | NZ
+  | OM
+  | PA
+  | PE
+  | PF
+  | PG
+  | PH
+  | PK
+  | PL
+  | PM
+  | PN
+  | PR
+  | PS
+  | PT
+  | PW
+  | PY
+  | QA
+  | RE
+  | RO
+  | RS
+  | RU
+  | RW
+  | SA
+  | SB
+  | SC
+  | SD
+  | SE
+  | SG
+  | SH
+  | SI
+  | SJ
+  | SK
+  | SL
+  | SM
+  | SN
+  | SO
+  | SR
+  | SS
+  | ST
+  | SV
+  | SX
+  | SY
+  | SZ
+  | TC
+  | TD
+  | TF
+  | TG
+  | TH
+  | TJ
+  | TK
+  | TL
+  | TM
+  | TN
+  | TO
+  | TR
+  | TT
+  | TV
+  | TW
+  | TZ
+  | UA
+  | UG
+  | UM
+  | US
+  | UY
+  | UZ
+  | VA
+  | VC
+  | VE
+  | VG
+  | VI
+  | VN
+  | VU
+  | WF
+  | WS
+  | YE
+  | YT
+  | ZA
+  | ZM
+  | ZW
+
+encodeCountryCode : CountryCode -> Value
+encodeCountryCode v =
+  case v of
+    AD -> Json.Encode.string "AD"
+    AE -> Json.Encode.string "AE"
+    AF -> Json.Encode.string "AF"
+    AG -> Json.Encode.string "AG"
+    AI -> Json.Encode.string "AI"
+    AL -> Json.Encode.string "AL"
+    AM -> Json.Encode.string "AM"
+    AO -> Json.Encode.string "AO"
+    AQ -> Json.Encode.string "AQ"
+    AR -> Json.Encode.string "AR"
+    AS -> Json.Encode.string "AS"
+    AT -> Json.Encode.string "AT"
+    AU -> Json.Encode.string "AU"
+    AW -> Json.Encode.string "AW"
+    AX -> Json.Encode.string "AX"
+    AZ -> Json.Encode.string "AZ"
+    BA -> Json.Encode.string "BA"
+    BB -> Json.Encode.string "BB"
+    BD -> Json.Encode.string "BD"
+    BE -> Json.Encode.string "BE"
+    BF -> Json.Encode.string "BF"
+    BG -> Json.Encode.string "BG"
+    BH -> Json.Encode.string "BH"
+    BI -> Json.Encode.string "BI"
+    BJ -> Json.Encode.string "BJ"
+    BL -> Json.Encode.string "BL"
+    BM -> Json.Encode.string "BM"
+    BN -> Json.Encode.string "BN"
+    BO -> Json.Encode.string "BO"
+    BQ -> Json.Encode.string "BQ"
+    BR -> Json.Encode.string "BR"
+    BS -> Json.Encode.string "BS"
+    BT -> Json.Encode.string "BT"
+    BV -> Json.Encode.string "BV"
+    BW -> Json.Encode.string "BW"
+    BY -> Json.Encode.string "BY"
+    BZ -> Json.Encode.string "BZ"
+    CA -> Json.Encode.string "CA"
+    CC -> Json.Encode.string "CC"
+    CD -> Json.Encode.string "CD"
+    CF -> Json.Encode.string "CF"
+    CG -> Json.Encode.string "CG"
+    CH -> Json.Encode.string "CH"
+    CI -> Json.Encode.string "CI"
+    CK -> Json.Encode.string "CK"
+    CL -> Json.Encode.string "CL"
+    CM -> Json.Encode.string "CM"
+    CN -> Json.Encode.string "CN"
+    CO -> Json.Encode.string "CO"
+    CR -> Json.Encode.string "CR"
+    CU -> Json.Encode.string "CU"
+    CV -> Json.Encode.string "CV"
+    CW -> Json.Encode.string "CW"
+    CX -> Json.Encode.string "CX"
+    CY -> Json.Encode.string "CY"
+    CZ -> Json.Encode.string "CZ"
+    DE -> Json.Encode.string "DE"
+    DJ -> Json.Encode.string "DJ"
+    DK -> Json.Encode.string "DK"
+    DM -> Json.Encode.string "DM"
+    DO -> Json.Encode.string "DO"
+    DZ -> Json.Encode.string "DZ"
+    EC -> Json.Encode.string "EC"
+    EE -> Json.Encode.string "EE"
+    EG -> Json.Encode.string "EG"
+    EH -> Json.Encode.string "EH"
+    ER -> Json.Encode.string "ER"
+    ES -> Json.Encode.string "ES"
+    ET -> Json.Encode.string "ET"
+    FI -> Json.Encode.string "FI"
+    FJ -> Json.Encode.string "FJ"
+    FK -> Json.Encode.string "FK"
+    FM -> Json.Encode.string "FM"
+    FO -> Json.Encode.string "FO"
+    FR -> Json.Encode.string "FR"
+    GA -> Json.Encode.string "GA"
+    GB -> Json.Encode.string "GB"
+    GD -> Json.Encode.string "GD"
+    GE -> Json.Encode.string "GE"
+    GF -> Json.Encode.string "GF"
+    GG -> Json.Encode.string "GG"
+    GH -> Json.Encode.string "GH"
+    GI -> Json.Encode.string "GI"
+    GL -> Json.Encode.string "GL"
+    GM -> Json.Encode.string "GM"
+    GN -> Json.Encode.string "GN"
+    GP -> Json.Encode.string "GP"
+    GQ -> Json.Encode.string "GQ"
+    GR -> Json.Encode.string "GR"
+    GS -> Json.Encode.string "GS"
+    GT -> Json.Encode.string "GT"
+    GU -> Json.Encode.string "GU"
+    GW -> Json.Encode.string "GW"
+    GY -> Json.Encode.string "GY"
+    HK -> Json.Encode.string "HK"
+    HM -> Json.Encode.string "HM"
+    HN -> Json.Encode.string "HN"
+    HR -> Json.Encode.string "HR"
+    HT -> Json.Encode.string "HT"
+    HU -> Json.Encode.string "HU"
+    ID -> Json.Encode.string "ID"
+    IE -> Json.Encode.string "IE"
+    IL -> Json.Encode.string "IL"
+    IM -> Json.Encode.string "IM"
+    IN -> Json.Encode.string "IN"
+    IO -> Json.Encode.string "IO"
+    IQ -> Json.Encode.string "IQ"
+    IR -> Json.Encode.string "IR"
+    IS -> Json.Encode.string "IS"
+    IT -> Json.Encode.string "IT"
+    JE -> Json.Encode.string "JE"
+    JM -> Json.Encode.string "JM"
+    JO -> Json.Encode.string "JO"
+    JP -> Json.Encode.string "JP"
+    KE -> Json.Encode.string "KE"
+    KG -> Json.Encode.string "KG"
+    KH -> Json.Encode.string "KH"
+    KI -> Json.Encode.string "KI"
+    KM -> Json.Encode.string "KM"
+    KN -> Json.Encode.string "KN"
+    KP -> Json.Encode.string "KP"
+    KR -> Json.Encode.string "KR"
+    KW -> Json.Encode.string "KW"
+    KY -> Json.Encode.string "KY"
+    KZ -> Json.Encode.string "KZ"
+    LA -> Json.Encode.string "LA"
+    LB -> Json.Encode.string "LB"
+    LC -> Json.Encode.string "LC"
+    LI -> Json.Encode.string "LI"
+    LK -> Json.Encode.string "LK"
+    LR -> Json.Encode.string "LR"
+    LS -> Json.Encode.string "LS"
+    LT -> Json.Encode.string "LT"
+    LU -> Json.Encode.string "LU"
+    LV -> Json.Encode.string "LV"
+    LY -> Json.Encode.string "LY"
+    MA -> Json.Encode.string "MA"
+    MC -> Json.Encode.string "MC"
+    MD -> Json.Encode.string "MD"
+    ME -> Json.Encode.string "ME"
+    MF -> Json.Encode.string "MF"
+    MG -> Json.Encode.string "MG"
+    MH -> Json.Encode.string "MH"
+    MK -> Json.Encode.string "MK"
+    ML -> Json.Encode.string "ML"
+    MM -> Json.Encode.string "MM"
+    MN -> Json.Encode.string "MN"
+    MO -> Json.Encode.string "MO"
+    MP -> Json.Encode.string "MP"
+    MQ -> Json.Encode.string "MQ"
+    MR -> Json.Encode.string "MR"
+    MS -> Json.Encode.string "MS"
+    MT -> Json.Encode.string "MT"
+    MU -> Json.Encode.string "MU"
+    MV -> Json.Encode.string "MV"
+    MW -> Json.Encode.string "MW"
+    MX -> Json.Encode.string "MX"
+    MY -> Json.Encode.string "MY"
+    MZ -> Json.Encode.string "MZ"
+    NA -> Json.Encode.string "NA"
+    NC -> Json.Encode.string "NC"
+    NE -> Json.Encode.string "NE"
+    NF -> Json.Encode.string "NF"
+    NG -> Json.Encode.string "NG"
+    NI -> Json.Encode.string "NI"
+    NL -> Json.Encode.string "NL"
+    NO -> Json.Encode.string "NO"
+    NP -> Json.Encode.string "NP"
+    NR -> Json.Encode.string "NR"
+    NU -> Json.Encode.string "NU"
+    NZ -> Json.Encode.string "NZ"
+    OM -> Json.Encode.string "OM"
+    PA -> Json.Encode.string "PA"
+    PE -> Json.Encode.string "PE"
+    PF -> Json.Encode.string "PF"
+    PG -> Json.Encode.string "PG"
+    PH -> Json.Encode.string "PH"
+    PK -> Json.Encode.string "PK"
+    PL -> Json.Encode.string "PL"
+    PM -> Json.Encode.string "PM"
+    PN -> Json.Encode.string "PN"
+    PR -> Json.Encode.string "PR"
+    PS -> Json.Encode.string "PS"
+    PT -> Json.Encode.string "PT"
+    PW -> Json.Encode.string "PW"
+    PY -> Json.Encode.string "PY"
+    QA -> Json.Encode.string "QA"
+    RE -> Json.Encode.string "RE"
+    RO -> Json.Encode.string "RO"
+    RS -> Json.Encode.string "RS"
+    RU -> Json.Encode.string "RU"
+    RW -> Json.Encode.string "RW"
+    SA -> Json.Encode.string "SA"
+    SB -> Json.Encode.string "SB"
+    SC -> Json.Encode.string "SC"
+    SD -> Json.Encode.string "SD"
+    SE -> Json.Encode.string "SE"
+    SG -> Json.Encode.string "SG"
+    SH -> Json.Encode.string "SH"
+    SI -> Json.Encode.string "SI"
+    SJ -> Json.Encode.string "SJ"
+    SK -> Json.Encode.string "SK"
+    SL -> Json.Encode.string "SL"
+    SM -> Json.Encode.string "SM"
+    SN -> Json.Encode.string "SN"
+    SO -> Json.Encode.string "SO"
+    SR -> Json.Encode.string "SR"
+    SS -> Json.Encode.string "SS"
+    ST -> Json.Encode.string "ST"
+    SV -> Json.Encode.string "SV"
+    SX -> Json.Encode.string "SX"
+    SY -> Json.Encode.string "SY"
+    SZ -> Json.Encode.string "SZ"
+    TC -> Json.Encode.string "TC"
+    TD -> Json.Encode.string "TD"
+    TF -> Json.Encode.string "TF"
+    TG -> Json.Encode.string "TG"
+    TH -> Json.Encode.string "TH"
+    TJ -> Json.Encode.string "TJ"
+    TK -> Json.Encode.string "TK"
+    TL -> Json.Encode.string "TL"
+    TM -> Json.Encode.string "TM"
+    TN -> Json.Encode.string "TN"
+    TO -> Json.Encode.string "TO"
+    TR -> Json.Encode.string "TR"
+    TT -> Json.Encode.string "TT"
+    TV -> Json.Encode.string "TV"
+    TW -> Json.Encode.string "TW"
+    TZ -> Json.Encode.string "TZ"
+    UA -> Json.Encode.string "UA"
+    UG -> Json.Encode.string "UG"
+    UM -> Json.Encode.string "UM"
+    US -> Json.Encode.string "US"
+    UY -> Json.Encode.string "UY"
+    UZ -> Json.Encode.string "UZ"
+    VA -> Json.Encode.string "VA"
+    VC -> Json.Encode.string "VC"
+    VE -> Json.Encode.string "VE"
+    VG -> Json.Encode.string "VG"
+    VI -> Json.Encode.string "VI"
+    VN -> Json.Encode.string "VN"
+    VU -> Json.Encode.string "VU"
+    WF -> Json.Encode.string "WF"
+    WS -> Json.Encode.string "WS"
+    YE -> Json.Encode.string "YE"
+    YT -> Json.Encode.string "YT"
+    ZA -> Json.Encode.string "ZA"
+    ZM -> Json.Encode.string "ZM"
+    ZW -> Json.Encode.string "ZW"
+
+decodeCountryCode : Decoder CountryCode
+decodeCountryCode  =
+  let
+    decide : String -> Decoder CountryCode
+    decide tag =
+      case tag of
+        "AD" -> Json.Decode.succeed AD
+        "AE" -> Json.Decode.succeed AE
+        "AF" -> Json.Decode.succeed AF
+        "AG" -> Json.Decode.succeed AG
+        "AI" -> Json.Decode.succeed AI
+        "AL" -> Json.Decode.succeed AL
+        "AM" -> Json.Decode.succeed AM
+        "AO" -> Json.Decode.succeed AO
+        "AQ" -> Json.Decode.succeed AQ
+        "AR" -> Json.Decode.succeed AR
+        "AS" -> Json.Decode.succeed AS
+        "AT" -> Json.Decode.succeed AT
+        "AU" -> Json.Decode.succeed AU
+        "AW" -> Json.Decode.succeed AW
+        "AX" -> Json.Decode.succeed AX
+        "AZ" -> Json.Decode.succeed AZ
+        "BA" -> Json.Decode.succeed BA
+        "BB" -> Json.Decode.succeed BB
+        "BD" -> Json.Decode.succeed BD
+        "BE" -> Json.Decode.succeed BE
+        "BF" -> Json.Decode.succeed BF
+        "BG" -> Json.Decode.succeed BG
+        "BH" -> Json.Decode.succeed BH
+        "BI" -> Json.Decode.succeed BI
+        "BJ" -> Json.Decode.succeed BJ
+        "BL" -> Json.Decode.succeed BL
+        "BM" -> Json.Decode.succeed BM
+        "BN" -> Json.Decode.succeed BN
+        "BO" -> Json.Decode.succeed BO
+        "BQ" -> Json.Decode.succeed BQ
+        "BR" -> Json.Decode.succeed BR
+        "BS" -> Json.Decode.succeed BS
+        "BT" -> Json.Decode.succeed BT
+        "BV" -> Json.Decode.succeed BV
+        "BW" -> Json.Decode.succeed BW
+        "BY" -> Json.Decode.succeed BY
+        "BZ" -> Json.Decode.succeed BZ
+        "CA" -> Json.Decode.succeed CA
+        "CC" -> Json.Decode.succeed CC
+        "CD" -> Json.Decode.succeed CD
+        "CF" -> Json.Decode.succeed CF
+        "CG" -> Json.Decode.succeed CG
+        "CH" -> Json.Decode.succeed CH
+        "CI" -> Json.Decode.succeed CI
+        "CK" -> Json.Decode.succeed CK
+        "CL" -> Json.Decode.succeed CL
+        "CM" -> Json.Decode.succeed CM
+        "CN" -> Json.Decode.succeed CN
+        "CO" -> Json.Decode.succeed CO
+        "CR" -> Json.Decode.succeed CR
+        "CU" -> Json.Decode.succeed CU
+        "CV" -> Json.Decode.succeed CV
+        "CW" -> Json.Decode.succeed CW
+        "CX" -> Json.Decode.succeed CX
+        "CY" -> Json.Decode.succeed CY
+        "CZ" -> Json.Decode.succeed CZ
+        "DE" -> Json.Decode.succeed DE
+        "DJ" -> Json.Decode.succeed DJ
+        "DK" -> Json.Decode.succeed DK
+        "DM" -> Json.Decode.succeed DM
+        "DO" -> Json.Decode.succeed DO
+        "DZ" -> Json.Decode.succeed DZ
+        "EC" -> Json.Decode.succeed EC
+        "EE" -> Json.Decode.succeed EE
+        "EG" -> Json.Decode.succeed EG
+        "EH" -> Json.Decode.succeed EH
+        "ER" -> Json.Decode.succeed ER
+        "ES" -> Json.Decode.succeed ES
+        "ET" -> Json.Decode.succeed ET
+        "FI" -> Json.Decode.succeed FI
+        "FJ" -> Json.Decode.succeed FJ
+        "FK" -> Json.Decode.succeed FK
+        "FM" -> Json.Decode.succeed FM
+        "FO" -> Json.Decode.succeed FO
+        "FR" -> Json.Decode.succeed FR
+        "GA" -> Json.Decode.succeed GA
+        "GB" -> Json.Decode.succeed GB
+        "GD" -> Json.Decode.succeed GD
+        "GE" -> Json.Decode.succeed GE
+        "GF" -> Json.Decode.succeed GF
+        "GG" -> Json.Decode.succeed GG
+        "GH" -> Json.Decode.succeed GH
+        "GI" -> Json.Decode.succeed GI
+        "GL" -> Json.Decode.succeed GL
+        "GM" -> Json.Decode.succeed GM
+        "GN" -> Json.Decode.succeed GN
+        "GP" -> Json.Decode.succeed GP
+        "GQ" -> Json.Decode.succeed GQ
+        "GR" -> Json.Decode.succeed GR
+        "GS" -> Json.Decode.succeed GS
+        "GT" -> Json.Decode.succeed GT
+        "GU" -> Json.Decode.succeed GU
+        "GW" -> Json.Decode.succeed GW
+        "GY" -> Json.Decode.succeed GY
+        "HK" -> Json.Decode.succeed HK
+        "HM" -> Json.Decode.succeed HM
+        "HN" -> Json.Decode.succeed HN
+        "HR" -> Json.Decode.succeed HR
+        "HT" -> Json.Decode.succeed HT
+        "HU" -> Json.Decode.succeed HU
+        "ID" -> Json.Decode.succeed ID
+        "IE" -> Json.Decode.succeed IE
+        "IL" -> Json.Decode.succeed IL
+        "IM" -> Json.Decode.succeed IM
+        "IN" -> Json.Decode.succeed IN
+        "IO" -> Json.Decode.succeed IO
+        "IQ" -> Json.Decode.succeed IQ
+        "IR" -> Json.Decode.succeed IR
+        "IS" -> Json.Decode.succeed IS
+        "IT" -> Json.Decode.succeed IT
+        "JE" -> Json.Decode.succeed JE
+        "JM" -> Json.Decode.succeed JM
+        "JO" -> Json.Decode.succeed JO
+        "JP" -> Json.Decode.succeed JP
+        "KE" -> Json.Decode.succeed KE
+        "KG" -> Json.Decode.succeed KG
+        "KH" -> Json.Decode.succeed KH
+        "KI" -> Json.Decode.succeed KI
+        "KM" -> Json.Decode.succeed KM
+        "KN" -> Json.Decode.succeed KN
+        "KP" -> Json.Decode.succeed KP
+        "KR" -> Json.Decode.succeed KR
+        "KW" -> Json.Decode.succeed KW
+        "KY" -> Json.Decode.succeed KY
+        "KZ" -> Json.Decode.succeed KZ
+        "LA" -> Json.Decode.succeed LA
+        "LB" -> Json.Decode.succeed LB
+        "LC" -> Json.Decode.succeed LC
+        "LI" -> Json.Decode.succeed LI
+        "LK" -> Json.Decode.succeed LK
+        "LR" -> Json.Decode.succeed LR
+        "LS" -> Json.Decode.succeed LS
+        "LT" -> Json.Decode.succeed LT
+        "LU" -> Json.Decode.succeed LU
+        "LV" -> Json.Decode.succeed LV
+        "LY" -> Json.Decode.succeed LY
+        "MA" -> Json.Decode.succeed MA
+        "MC" -> Json.Decode.succeed MC
+        "MD" -> Json.Decode.succeed MD
+        "ME" -> Json.Decode.succeed ME
+        "MF" -> Json.Decode.succeed MF
+        "MG" -> Json.Decode.succeed MG
+        "MH" -> Json.Decode.succeed MH
+        "MK" -> Json.Decode.succeed MK
+        "ML" -> Json.Decode.succeed ML
+        "MM" -> Json.Decode.succeed MM
+        "MN" -> Json.Decode.succeed MN
+        "MO" -> Json.Decode.succeed MO
+        "MP" -> Json.Decode.succeed MP
+        "MQ" -> Json.Decode.succeed MQ
+        "MR" -> Json.Decode.succeed MR
+        "MS" -> Json.Decode.succeed MS
+        "MT" -> Json.Decode.succeed MT
+        "MU" -> Json.Decode.succeed MU
+        "MV" -> Json.Decode.succeed MV
+        "MW" -> Json.Decode.succeed MW
+        "MX" -> Json.Decode.succeed MX
+        "MY" -> Json.Decode.succeed MY
+        "MZ" -> Json.Decode.succeed MZ
+        "NA" -> Json.Decode.succeed NA
+        "NC" -> Json.Decode.succeed NC
+        "NE" -> Json.Decode.succeed NE
+        "NF" -> Json.Decode.succeed NF
+        "NG" -> Json.Decode.succeed NG
+        "NI" -> Json.Decode.succeed NI
+        "NL" -> Json.Decode.succeed NL
+        "NO" -> Json.Decode.succeed NO
+        "NP" -> Json.Decode.succeed NP
+        "NR" -> Json.Decode.succeed NR
+        "NU" -> Json.Decode.succeed NU
+        "NZ" -> Json.Decode.succeed NZ
+        "OM" -> Json.Decode.succeed OM
+        "PA" -> Json.Decode.succeed PA
+        "PE" -> Json.Decode.succeed PE
+        "PF" -> Json.Decode.succeed PF
+        "PG" -> Json.Decode.succeed PG
+        "PH" -> Json.Decode.succeed PH
+        "PK" -> Json.Decode.succeed PK
+        "PL" -> Json.Decode.succeed PL
+        "PM" -> Json.Decode.succeed PM
+        "PN" -> Json.Decode.succeed PN
+        "PR" -> Json.Decode.succeed PR
+        "PS" -> Json.Decode.succeed PS
+        "PT" -> Json.Decode.succeed PT
+        "PW" -> Json.Decode.succeed PW
+        "PY" -> Json.Decode.succeed PY
+        "QA" -> Json.Decode.succeed QA
+        "RE" -> Json.Decode.succeed RE
+        "RO" -> Json.Decode.succeed RO
+        "RS" -> Json.Decode.succeed RS
+        "RU" -> Json.Decode.succeed RU
+        "RW" -> Json.Decode.succeed RW
+        "SA" -> Json.Decode.succeed SA
+        "SB" -> Json.Decode.succeed SB
+        "SC" -> Json.Decode.succeed SC
+        "SD" -> Json.Decode.succeed SD
+        "SE" -> Json.Decode.succeed SE
+        "SG" -> Json.Decode.succeed SG
+        "SH" -> Json.Decode.succeed SH
+        "SI" -> Json.Decode.succeed SI
+        "SJ" -> Json.Decode.succeed SJ
+        "SK" -> Json.Decode.succeed SK
+        "SL" -> Json.Decode.succeed SL
+        "SM" -> Json.Decode.succeed SM
+        "SN" -> Json.Decode.succeed SN
+        "SO" -> Json.Decode.succeed SO
+        "SR" -> Json.Decode.succeed SR
+        "SS" -> Json.Decode.succeed SS
+        "ST" -> Json.Decode.succeed ST
+        "SV" -> Json.Decode.succeed SV
+        "SX" -> Json.Decode.succeed SX
+        "SY" -> Json.Decode.succeed SY
+        "SZ" -> Json.Decode.succeed SZ
+        "TC" -> Json.Decode.succeed TC
+        "TD" -> Json.Decode.succeed TD
+        "TF" -> Json.Decode.succeed TF
+        "TG" -> Json.Decode.succeed TG
+        "TH" -> Json.Decode.succeed TH
+        "TJ" -> Json.Decode.succeed TJ
+        "TK" -> Json.Decode.succeed TK
+        "TL" -> Json.Decode.succeed TL
+        "TM" -> Json.Decode.succeed TM
+        "TN" -> Json.Decode.succeed TN
+        "TO" -> Json.Decode.succeed TO
+        "TR" -> Json.Decode.succeed TR
+        "TT" -> Json.Decode.succeed TT
+        "TV" -> Json.Decode.succeed TV
+        "TW" -> Json.Decode.succeed TW
+        "TZ" -> Json.Decode.succeed TZ
+        "UA" -> Json.Decode.succeed UA
+        "UG" -> Json.Decode.succeed UG
+        "UM" -> Json.Decode.succeed UM
+        "US" -> Json.Decode.succeed US
+        "UY" -> Json.Decode.succeed UY
+        "UZ" -> Json.Decode.succeed UZ
+        "VA" -> Json.Decode.succeed VA
+        "VC" -> Json.Decode.succeed VC
+        "VE" -> Json.Decode.succeed VE
+        "VG" -> Json.Decode.succeed VG
+        "VI" -> Json.Decode.succeed VI
+        "VN" -> Json.Decode.succeed VN
+        "VU" -> Json.Decode.succeed VU
+        "WF" -> Json.Decode.succeed WF
+        "WS" -> Json.Decode.succeed WS
+        "YE" -> Json.Decode.succeed YE
+        "YT" -> Json.Decode.succeed YT
+        "ZA" -> Json.Decode.succeed ZA
+        "ZM" -> Json.Decode.succeed ZM
+        "ZW" -> Json.Decode.succeed ZW
+        other ->
+          Json.Decode.fail <| "CountryCode doesn't have constructor: " ++ other
+  in
+  Json.Decode.string
+    |> Json.Decode.andThen decide
+################################################################################
+

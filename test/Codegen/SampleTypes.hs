@@ -465,29 +465,29 @@ sampleTypes =
     , include @(Form 'Report)
     ]
 
-instance ElmDeclarable Type SimpleType
-instance ElmDeclarable Type SimpleRecord
-instance ElmDeclarable Type RecordWithMultipleConstructors
-instance ElmDeclarable Type MonomorphicRecursiveType
-instance ElmDeclarable (Type -> Type) PolymorphicRecursiveType
-instance (ElmDeclarable (Type -> Type) f, HasSymbolInfo f) => ElmDeclarable Type (SimpleHKT f) where
+instance ElmDeclarable SimpleType
+instance ElmDeclarable SimpleRecord
+instance ElmDeclarable RecordWithMultipleConstructors
+instance ElmDeclarable MonomorphicRecursiveType
+instance ElmDeclarable PolymorphicRecursiveType
+instance (ElmDeclarable f, HasSymbolInfo f) => ElmDeclarable (SimpleHKT f) where
     mapTo =
         (defaultMapping @(SimpleHKT f))
             { typeName = "SimpleHKT" <> getTypeName @f
             }
 
-instance ElmDeclarable Type (HKTWithSpecializedKindStarParams Int Text Maybe)
-instance ElmDeclarable (Type -> Type -> Type) (HKTWithUnspecializedParams (Either Int))
+instance ElmDeclarable (HKTWithSpecializedKindStarParams Int Text Maybe)
+instance ElmDeclarable (HKTWithUnspecializedParams (Either Int))
 
-instance ElmDeclarable (Type -> Type) (NatPhantomParameter n) where
+instance ElmDeclarable (NatPhantomParameter n) where
     mapTo =
         (defaultMapping @(NatPhantomParameter n))
             { typeName = "LookMaNoPhantomParam"
             }
 
-instance ElmDeclarable (Type -> Type) LargeRecord
+instance ElmDeclarable LargeRecord
 
-instance ElmDeclarable Type Int where
+instance ElmDeclarable Int where
     mapTo =
         ElmMapping
             { typeName = "Int"
@@ -510,7 +510,7 @@ instance ElmDeclarable Type Int where
             , queryParam = Nothing
             }
 
-instance ElmDeclarable Type Text where
+instance ElmDeclarable Text where
     mapTo =
         ElmMapping
             { typeName = "String"
@@ -533,13 +533,13 @@ instance ElmDeclarable Type Text where
             , queryParam = Nothing
             }
 
-instance ElmDeclarable Type [Char] where
-    mapTo = mapTo @_ @Text
+instance ElmDeclarable [Char] where
+    mapTo = mapTo @Text
 
-instance ElmDeclarable Type CountryCode where
+instance ElmDeclarable CountryCode where
     mapTo = setModule "Data.CountryCode" (defaultMapping @CountryCode)
 
-instance ElmDeclarable Type Bool where
+instance ElmDeclarable Bool where
     mapTo =
         ElmMapping
             { typeName = "Bool"
@@ -562,7 +562,7 @@ instance ElmDeclarable Type Bool where
             , queryParam = Nothing
             }
 
-instance ElmDeclarable (Type -> Type) Maybe where
+instance ElmDeclarable Maybe where
     mapTo =
         ElmMapping
             { typeName = "Maybe"
@@ -585,10 +585,10 @@ instance ElmDeclarable (Type -> Type) Maybe where
             , queryParam = Nothing
             }
 
-instance ElmDeclarable (Type -> Type -> Type) Either where
+instance ElmDeclarable Either where
     mapTo = setModule "Codegen.Either" (defaultMapping @Either)
 
-instance ElmDeclarable (Type -> Type) [] where
+instance ElmDeclarable [] where
     mapTo =
         ElmMapping
             { typeName = "List"
@@ -611,25 +611,25 @@ instance ElmDeclarable (Type -> Type) [] where
             , queryParam = Nothing
             }
 
-instance ElmDeclarable Type (Form 'Submission) where
+instance ElmDeclarable (Form 'Submission) where
     mapTo = setModule "Codegen.Submission" (defaultMapping @(Form 'Submission))
 
-instance ElmDeclarable Type (Form 'Report) where
+instance ElmDeclarable (Form 'Report) where
     mapTo = setModule "Codegen.Report" (defaultMapping @(Form 'Report))
 
-instance ElmDeclarable Type (FileUpload 'Submission) where
+instance ElmDeclarable (FileUpload 'Submission) where
     mapTo = setModule "Codegen.Submission" (defaultMapping @(FileUpload 'Submission))
 
-instance ElmDeclarable Type (FileUpload 'Report) where
+instance ElmDeclarable (FileUpload 'Report) where
     mapTo = setModule "Codegen.Report" (defaultMapping @(FileUpload 'Report))
 
-instance ElmDeclarable Type SimpleRecordAlias where
+instance ElmDeclarable SimpleRecordAlias where
     mapTo =
         (defaultMapping @SimpleRecordAlias)
             { isTypeAlias = True
             }
 
-instance ElmDeclarable Type EmptyAlias where
+instance ElmDeclarable EmptyAlias where
     mapTo =
         (defaultMapping @EmptyAlias)
             { isTypeAlias = True

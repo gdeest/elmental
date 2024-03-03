@@ -34,6 +34,9 @@ import GHC.Generics qualified as GHC
 import GHC.TypeLits
 import Generics.Kind
 
+type family KindOf (x :: k) :: Type where
+    KindOf (_ :: k) = k
+
 {- | Class mapping a Haskell type constructor @x :: k@ to an Elm type constructor.
 
   You can define instances for this class for any Haskell data / newtype constructor,
@@ -53,7 +56,7 @@ import Generics.Kind
     instance ElmDeclarable [Char] -- OK
  @
 -}
-class (ElmKind k) => ElmDeclarable k (x :: k) where
+class (ElmKind (KindOf x)) => ElmDeclarable x where
     -- | Elm mapping information.
     --
     --  Contains the name / location of the type and its encoder / decoder.
@@ -82,9 +85,9 @@ class (ElmKind k) => ElmDeclarable k (x :: k) where
     mapTo = defaultMapping @x
 
     -- | Internal function. You should not have to define this method yourself.
-    mkTyRef :: PList (NParams k) TyRef -> TyRef
-    default mkTyRef :: PList (NParams k) TyRef -> TyRef
-    mkTyRef pList = TyRef (TyMapping (mapTo @k @x)) (pListToList pList)
+    mkTyRef :: PList (NParams (KindOf x)) TyRef -> TyRef
+    default mkTyRef :: PList (NParams (KindOf x)) TyRef -> TyRef
+    mkTyRef pList = TyRef (TyMapping (mapTo @x)) (pListToList pList)
 
 {- | Instance for applied type constructors.
 
@@ -94,17 +97,17 @@ class (ElmKind k) => ElmDeclarable k (x :: k) where
 instance
     {-# OVERLAPPABLE #-}
     forall k (t :: Type) (x :: Type -> k).
-    ( ElmDeclarable Type t
-    , ElmDeclarable (Type -> k) (x :: Type -> k)
+    ( ElmDeclarable t
+    , ElmDeclarable (x :: Type -> k)
     ) =>
-    ElmDeclarable k (x t)
+    ElmDeclarable (x t)
     where
     mapTo =
-        let tMapping = mapTo @_ @t
-            xMapping = mapTo @_ @x
+        let tMapping = mapTo @t
+            xMapping = mapTo @x
          in xMapping{args = xMapping.args <> [tMapping]}
 
-    mkTyRef remainingParams = mkTyRef @_ @x ((mkTyRef @_ @t PNil) `PCons` remainingParams)
+    mkTyRef remainingParams = mkTyRef @x ((mkTyRef @t PNil) `PCons` remainingParams)
 
 type HasSymbolInfo x =
     ( KnownSymbol (GetTypeNameG (RepK x))
@@ -170,13 +173,13 @@ type family GetTypeNameG x where
 symbolToText :: forall sym. (KnownSymbol sym) => Text
 symbolToText = Text.pack $ symbolVal (Proxy @sym)
 
-getMapping :: forall {k} x. (ElmDeclarable k x) => ElmMapping
-getMapping = mapTo @k @x
+getMapping :: forall x. ElmDeclarable x => ElmMapping
+getMapping = mapTo @x
 
-getTypeName :: forall {k} x. (ElmDeclarable k x) => Text
+getTypeName :: forall x. ElmDeclarable x => Text
 getTypeName = (getMapping @x).typeName
 
-getModuleName :: forall {k} x. (ElmDeclarable k x) => Maybe Text
+getModuleName :: forall  x. (ElmDeclarable x) => Maybe Text
 getModuleName = (getMapping @x).moduleName
 
 -- Usual Peano numbers / length-indexed lists stuff.
@@ -213,10 +216,10 @@ class (repK ~ RepK x) => HasElmStructure' k (x :: k) repK where
     getElmStructure' :: DatatypeStructure x
 
 instance
-    ( ElmDeclarable k x
+    ( ElmDeclarable x
     , RepK x ~ M1 GHC.D ('GHC.MetaData tName mName pkg isNewtype) sop
     , GElmSum sop
-    , KnownNat (PNatToNat (NParams k))
+    , KnownNat (PNatToNat (NParams (KindOf x)))
     ) =>
     HasElmStructure' k x (M1 GHC.D ('GHC.MetaData tName mName pkg isNewtype) sop)
     where
@@ -333,8 +336,8 @@ instance HasNat (VS vn) where
 instance (KnownNat (ToNat vn)) => GElmFieldType Z ('Var vn) where
     getTyRef _ = TyRef (TyVar $ "a" <> Text.pack (show $ natVal $ Proxy @(ToNat vn))) []
 
-instance (ElmDeclarable k someType, nParams ~ NParams k) => GElmFieldType nParams ('Kon someType) where
-    getTyRef params = mkTyRef @k @someType params
+instance (ElmDeclarable someType, nParams ~ NParams (KindOf someType)) => GElmFieldType nParams ('Kon someType) where
+    getTyRef params = mkTyRef @someType params
 
 instance
     (GElmFieldType Z t2, GElmFieldType (S n) t1) =>

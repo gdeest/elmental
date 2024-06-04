@@ -173,13 +173,13 @@ type family GetTypeNameG x where
 symbolToText :: forall sym. (KnownSymbol sym) => Text
 symbolToText = Text.pack $ symbolVal (Proxy @sym)
 
-getMapping :: forall x. ElmDeclarable x => ElmMapping
+getMapping :: forall x. (ElmDeclarable x) => ElmMapping
 getMapping = mapTo @x
 
-getTypeName :: forall x. ElmDeclarable x => Text
+getTypeName :: forall x. (ElmDeclarable x) => Text
 getTypeName = (getMapping @x).typeName
 
-getModuleName :: forall  x. (ElmDeclarable x) => Maybe Text
+getModuleName :: forall x. (ElmDeclarable x) => Maybe Text
 getModuleName = (getMapping @x).moduleName
 
 -- Usual Peano numbers / length-indexed lists stuff.

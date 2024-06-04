@@ -17,7 +17,7 @@ import Data.Text (Text)
 import Elmental
 import Elmental.Generate (SomeStructure, include)
 import GHC.TypeLits (Nat)
-import Generics.Kind.TH (deriveGenericK)
+import Generics.Kind.TH (deriveGenericK, deriveGenericKQuiet)
 
 data SimpleType = SimpleType Int
 
@@ -434,8 +434,8 @@ $(deriveGenericK ''HKTWithUnspecializedParams)
 $(deriveGenericK ''NatPhantomParameter)
 $(deriveGenericK ''LargeRecord)
 $(deriveGenericK ''CountryCode)
-$(deriveGenericK ''FileUpload)
-$(deriveGenericK ''Form)
+$(deriveGenericKQuiet ''FileUpload)
+$(deriveGenericKQuiet ''Form)
 
 -- Datatypes defined elsewhere
 

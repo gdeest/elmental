@@ -12,7 +12,6 @@ module Main where
 
 import Codegen.SampleTypes
 
-import Data.Kind (Type)
 import Data.Map.Strict (Map)
 import Data.Map.Strict qualified as Map
 import Data.Text (Text)
@@ -20,9 +19,6 @@ import Data.Text qualified as Text
 import Elmental
 import Elmental.Generate
 
-import System.Directory (withCurrentDirectory)
-import System.Exit (ExitCode (ExitSuccess))
-import System.Process qualified as Process
 import Test.Hspec
 import Test.Hspec.Golden
 

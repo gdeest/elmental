@@ -63,9 +63,7 @@ test-suite elmental-test
     other-modules:    Codegen.SampleTypes
     build-depends:    base >=4.16.4.0 && < 5.0,
                       containers,
-                      directory,
                       elmental,
-                      process,
                       text,
                       kind-generics-th,
                       hspec,
@@ -82,12 +80,6 @@ executable generate-test-app-code
 
     other-modules:    Codegen.SampleTypes
     build-depends:    base >=4.16.4.0 && < 5.0,
-                      containers,
-                      directory,
                       elmental,
-                      process,
                       text,
-                      kind-generics-th,
-                      hspec,
-                      hspec-golden,
-                      pretty-show
+                      kind-generics-th

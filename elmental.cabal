@@ -2,7 +2,7 @@ cabal-version:      3.0
 
 maintainer:         Gaël Deest
 name:               elmental
-version:            0.1.0.0
+version:            0.1.0.1
 
 license:            BSD-3-Clause
 synopsis: Generate Elm datatype definitions, encoders and decoders from Haskell datatypes.
@@ -16,6 +16,9 @@ author:             Gaël Deest
 category:           Codegen
 
 extra-doc-files: CHANGELOG.md
+extra-source-files:
+  test-output/codegen/golden/*.txt
+  test-output/extraction/golden/*.txt
 source-repository head
   type: git
   location: https://github.com/gdeest/elmental.git

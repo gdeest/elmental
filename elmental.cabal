@@ -2,7 +2,7 @@ cabal-version:      3.0
 
 maintainer:         Gaël Deest
 name:               elmental
-version:            0.1.0.1
+version:            0.1.0.2
 
 license:            BSD-3-Clause
 synopsis: Generate Elm datatype definitions, encoders and decoders from Haskell datatypes.
@@ -10,7 +10,7 @@ synopsis: Generate Elm datatype definitions, encoders and decoders from Haskell 
 description: Elmental is a code generator that takes in Haskell type definitions and generates Elm datatypes, along with Aeson-compatible encoders and decoders.
              It emphasizes flexibility, support for a large number of Haskell types, and integration into existing Elm codebases.
 
-homepage:           https://github.com/withflint/monorepo
+homepage:           https://github.com/gdeest/elmental
 author:             Gaël Deest
 
 category:           Codegen

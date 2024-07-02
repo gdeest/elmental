@@ -10,6 +10,25 @@
 {-# LANGUAGE UndecidableInstances #-}
 {-# LANGUAGE NoFieldSelectors #-}
 
+{- | == Introduction
+
+Elmental intends to make it easy for you to keep backend and frontend
+definitions in-sync, by generating frontend types and associated Json encoders /
+decoders straight from backend definitions.
+
+Compared to competing libraries, it stands out by:
+
+- Easy integration with legacy and third-party Elm types. If one of your Haskell
+  types needs special treatment, just specify the location of the corresponding
+  Elm type and encoder / decoder in your frontend codebase or dependencies.
+
+- Native support for a large number of Haskell datatypes and idioms, thanks to
+  its reliance on
+  [kind-generics](https://hackage.haskell.org/package/kind-generics).
+
+=== Basic Usage
+
+-}
 module Elmental (
     ElmDeclarable (..),
     HasElmStructure,
@@ -34,23 +53,57 @@ import GHC.Generics qualified as GHC
 import GHC.TypeLits
 import Generics.Kind
 
+{- | Type family returning the kind of a type. -}
 type family KindOf (x :: k) :: Type where
     KindOf (_ :: k) = k
 
-{- | Class mapping a Haskell type constructor @x :: k@ to an Elm type constructor.
+{- | Class mapping a Haskell type constructor @x :: k@ to an Elm type constructor,
+  along with the location of its Elm decoder / encoder, if applicable.
+
+  It is used both for generated types and pre-existing, third-party Elm types.
+  For example, one may map 'Text' to the native Elm @String@ type like this:
+
+  @
+    instance ElmDeclarable Text where
+        mapTo =
+            ElmMapping
+                { typeName = "String"
+                , moduleName = Nothing
+                , decoderLocation =
+                    Just $
+                        SymbolLocation
+                            { symbolName = "string"
+                            , symbolModuleName = "Json.Decode"
+                            }
+                , encoderLocation =
+                    Just $
+                        SymbolLocation
+                            { symbolName = "string"
+                            , symbolModuleName = "Json.Encode"
+                            }
+                , args = []
+                }
+  @
+
+
+  A default mapping is provided that reuses the type / module name of the
+  Haskell type, and prepends 'encode' or 'decode' to the type name to derive the
+  name of encoders / decoders. It is mostly intended for generated types, where
+  one is more free the choose the Elm type name / location.
 
   You can define instances for this class for any Haskell data / newtype constructor,
   be it unapplied, partially applied or fully applied, provided that its kind is
-  not Elm-compatible (i.e., not higher-kinded).
+  Elm-compatible (i.e., not higher-kinded).
 
   For example:
 
   @
+    type SomeHKT :: (Type -> Type) -> Type -> Type
     data SomeHKT f a = SomeHKT (f a)
 
-    instance ElmDeclarable ((Type -> Type) -> Type) SomeHKT -- Not OK: SomeHKT is higher-kinded.
-    instance ElmDeclarable (Type -> Type) (SomeHKT Maybe) -- OK
-    instance ElmDeclarable Type (SomeHKT Maybe Int) -- OK
+    instance ElmDeclarable SomeHKT -- Not OK: SomeHKT is higher-kinded.
+    instance ElmDeclarable (SomeHKT Maybe) -- OK
+    instance ElmDeclarable (SomeHKT Maybe Int) -- OK
 
     instance ElmDeclarable [] -- OK
     instance ElmDeclarable [Char] -- OK

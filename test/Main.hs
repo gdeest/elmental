@@ -24,10 +24,10 @@ import Test.Hspec.Golden
 
 import Text.Show.Pretty (ppShow)
 
-mkExtractionTest :: forall {k} x. (HasElmStructure k x) => String -> Golden String
+mkExtractionTest :: forall {k} x. (HasGenerationSpec k x) => String -> Golden String
 mkExtractionTest name =
     Golden
-        { output = ppShow $ getElmStructure @x
+        { output = ppShow $ getGenerationSpec @x
         , encodePretty = id
         , writeToFile = writeFile
         , readFromFile = readFile
@@ -36,7 +36,7 @@ mkExtractionTest name =
         , failFirstTime = True
         }
 
-mkCodegenTest :: [SomeStructure] -> String -> Golden String
+mkCodegenTest :: [SomeGenerationSpec] -> String -> Golden String
 mkCodegenTest typs name =
     Golden
         { output = renderSourceMap $ mkSourceMap typs

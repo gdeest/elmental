@@ -1,4 +1,4 @@
-DatatypeStructure
+GenerationSpec
   { mapping =
       ElmMapping
         { typeName = "SimpleType"

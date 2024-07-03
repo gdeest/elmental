@@ -15,7 +15,6 @@ module Codegen.SampleTypes where
 import Data.Kind (Type)
 import Data.Text (Text)
 import Elmental
-import Elmental.Generate (SomeStructure, include)
 import GHC.TypeLits (Nat)
 import Generics.Kind.TH (deriveGenericK, deriveGenericKQuiet)
 
@@ -443,7 +442,7 @@ $(deriveGenericK ''Bool)
 $(deriveGenericK ''Maybe)
 $(deriveGenericK ''Either)
 
-sampleTypes :: [SomeStructure]
+sampleTypes :: [SomeGenerationSpec]
 sampleTypes =
     [ include @SimpleType
     , include @SimpleRecord

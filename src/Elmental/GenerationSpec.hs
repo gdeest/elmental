@@ -1,8 +1,15 @@
 {-# LANGUAGE NoFieldSelectors #-}
 
-module Elmental.ElmStructure where
+module Elmental.GenerationSpec where
 
 import Data.Text (Text)
+
+data GenerationSpec a = GenerationSpec
+    { mapping :: ElmMapping
+    , nParams :: Integer
+    , constructors :: [Constructor]
+    }
+    deriving (Eq, Show, Ord)
 
 {- | Contains the mapping of Haskell type constructor to an Elm type constructor,
 and potentially the location of its encoder / decoder.
@@ -56,13 +63,6 @@ data TyCon
 data TyRef = TyRef
     { tyCon :: TyCon
     , tyArgs :: [TyRef]
-    }
-    deriving (Eq, Show, Ord)
-
-data DatatypeStructure a = DatatypeStructure
-    { mapping :: ElmMapping
-    , nParams :: Integer
-    , constructors :: [Constructor]
     }
     deriving (Eq, Show, Ord)
 

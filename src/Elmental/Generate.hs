@@ -15,11 +15,12 @@ module Elmental.Generate (
     mkSourceMap,
     include,
     outputModule,
-    SomeStructure (..),
+    SomeGenerationSpec (..),
     ModuleDefinition (..),
 ) where
 
-import Elmental
+import Elmental.GenerationSpec
+import Elmental.Extract
 
 import Data.Foldable (toList, traverse_)
 import Data.Function ((&))
@@ -37,11 +38,11 @@ import System.Directory (createDirectoryIfMissing)
 import System.FilePath ((</>))
 
 -- | Generate a type definition
-generateTypeDef :: forall {k} (x :: k). (HasElmStructure k x) => Text
-generateTypeDef = generateTypeDef' $ getElmStructure @x
+generateTypeDef :: forall {k} (x :: k). (HasGenerationSpec k x) => Text
+generateTypeDef = generateTypeDef' $ getGenerationSpec @x
 
-generateTypeDef' :: DatatypeStructure x -> Text
-generateTypeDef' DatatypeStructure{..}
+generateTypeDef' :: GenerationSpec x -> Text
+generateTypeDef' GenerationSpec{..}
     | (mapping.isTypeAlias && length constructors == 1 && null mapping.args && nParams == 0) =
         [trimming|
     type alias $tName =
@@ -102,11 +103,11 @@ generateTypeDef' DatatypeStructure{..}
 generateTypeDef' _ = error "Datatype has no constructor. Impossible to generate Elm definition."
 
 -- | Generate a decoder
-generateDecoder :: forall {k} (x :: k). (HasElmStructure k x) => Text
-generateDecoder = generateDecoder' $ getElmStructure @x
+generateDecoder :: forall {k} (x :: k). (HasGenerationSpec k x) => Text
+generateDecoder = generateDecoder' $ getGenerationSpec @x
 
-generateDecoder' :: DatatypeStructure x -> Text
-generateDecoder' DatatypeStructure{..} =
+generateDecoder' :: GenerationSpec x -> Text
+generateDecoder' GenerationSpec{..} =
     [trimming|
     $decoderName : $decoderType
     $decoderName $decoderArgs =
@@ -314,23 +315,23 @@ decodeAnonymousConstructor recursionStop cName fields =
   |]
 
 -- | Generate an encoder
-generateEncoder :: forall {k} (x :: k). (HasElmStructure k x) => Text
-generateEncoder = generateEncoder' $ getElmStructure @x
+generateEncoder :: forall {k} (x :: k). (HasGenerationSpec k x) => Text
+generateEncoder = generateEncoder' $ getGenerationSpec @x
 
-getEncoderLocation :: DatatypeStructure x -> SymbolLocation
-getEncoderLocation DatatypeStructure{..} =
+getEncoderLocation :: GenerationSpec x -> SymbolLocation
+getEncoderLocation GenerationSpec{..} =
     case mapping.encoderLocation of
         Nothing -> error $ "No encoder location for: " <> show mapping.typeName
         Just location -> location
 
-getEncoderName :: DatatypeStructure x -> Text
+getEncoderName :: GenerationSpec x -> Text
 getEncoderName = (.symbolName) . getEncoderLocation
 
-getEncoderModule :: DatatypeStructure x -> Text
+getEncoderModule :: GenerationSpec x -> Text
 getEncoderModule = (.symbolModuleName) . getEncoderLocation
 
-generateEncoder' :: DatatypeStructure x -> Text
-generateEncoder' structure@(DatatypeStructure{..})
+generateEncoder' :: GenerationSpec x -> Text
+generateEncoder' structure@(GenerationSpec{..})
     | mapping.isTypeAlias =
         [trimming|
     $encoderName : $encoderType
@@ -351,7 +352,7 @@ generateEncoder' structure@(DatatypeStructure{..})
     body = mkEncoderBody structure
     bodyAlias = mkEncoderBodyAlias structure
 
-mkEncoderType :: DatatypeStructure x -> Text
+mkEncoderType :: GenerationSpec x -> Text
 mkEncoderType structure =
     Text.intercalate " " $
         mconcat
@@ -363,7 +364,7 @@ mkEncoderType structure =
         ((\n -> "(e" <> n <> " -> Value) ->") . (Text.pack . show @Integer))
             <$> take (fromIntegral structure.nParams) [0 ..]
 
-mkEncoderDefLine :: DatatypeStructure x -> Text
+mkEncoderDefLine :: GenerationSpec x -> Text
 mkEncoderDefLine structure =
     Text.intercalate " " $
         mconcat
@@ -372,7 +373,7 @@ mkEncoderDefLine structure =
             , ["v", "="]
             ]
 
-mkEncoderDefLineAlias :: DatatypeStructure x -> Text
+mkEncoderDefLineAlias :: GenerationSpec x -> Text
 mkEncoderDefLineAlias structure =
     Text.intercalate " " $
         mconcat
@@ -381,8 +382,8 @@ mkEncoderDefLineAlias structure =
             , ["r", "="]
             ]
 
-qualifiedTypeNameAt :: DatatypeStructure x -> SymbolLocation -> Text
-qualifiedTypeNameAt s@(DatatypeStructure{..}) loc =
+qualifiedTypeNameAt :: GenerationSpec x -> SymbolLocation -> Text
+qualifiedTypeNameAt s@(GenerationSpec{..}) loc =
     let tName = case mapping.moduleName of
             Nothing -> mapping.typeName
             Just _ -> prefixFor s loc <> mapping.typeName
@@ -392,14 +393,14 @@ qualifiedTypeNameAt s@(DatatypeStructure{..}) loc =
             [single] -> single
             _multiple -> "(" <> Text.intercalate " " allComponents <> ")"
 
-prefixFor :: DatatypeStructure x -> SymbolLocation -> Text
-prefixFor DatatypeStructure{..} loc =
+prefixFor :: GenerationSpec x -> SymbolLocation -> Text
+prefixFor GenerationSpec{..} loc =
     case (mapping.moduleName, loc.symbolModuleName) of
         (Nothing, _) -> ""
         (Just m1, m2) -> if m1 == m2 then "" else m1 <> "."
 
-mkEncoderBody :: DatatypeStructure x -> Text
-mkEncoderBody structure@(DatatypeStructure{..}) =
+mkEncoderBody :: GenerationSpec x -> Text
+mkEncoderBody structure@(GenerationSpec{..}) =
     [trimming|
     case v of
       $constructorBranches
@@ -415,8 +416,8 @@ mkEncoderBody structure@(DatatypeStructure{..}) =
         multiple ->
             multipleConstructorBranches structure multiple
 
-mkEncoderBodyAlias :: DatatypeStructure x -> Text
-mkEncoderBodyAlias structure@(DatatypeStructure{..}) =
+mkEncoderBodyAlias :: GenerationSpec x -> Text
+mkEncoderBodyAlias structure@(GenerationSpec{..}) =
     [trimming|
     $constructorBranches
   |]
@@ -435,8 +436,8 @@ mkEncoderBodyAlias structure@(DatatypeStructure{..}) =
                 "Cannot generate encoder body as type alias (too many constructors): "
                     <> show structure.mapping.typeName
 
-unwrapConstructorBranch :: DatatypeStructure x -> Constructor -> Text
-unwrapConstructorBranch s@(DatatypeStructure{}) c =
+unwrapConstructorBranch :: GenerationSpec x -> Constructor -> Text
+unwrapConstructorBranch s@(GenerationSpec{}) c =
     let (cName, cArgs, contentEncoder) = constructorBranchHelper s c
         matchLine = Text.intercalate " " (cName : cArgs)
      in foldMap
@@ -448,8 +449,8 @@ unwrapConstructorBranch s@(DatatypeStructure{}) c =
             )
             contentEncoder
 
-constructorBranchHelper :: DatatypeStructure x -> Constructor -> (Text, [Text], Maybe Text)
-constructorBranchHelper s@(DatatypeStructure{}) c =
+constructorBranchHelper :: GenerationSpec x -> Constructor -> (Text, [Text], Maybe Text)
+constructorBranchHelper s@(GenerationSpec{}) c =
     (cName, cArgs, contentEncoder)
   where
     cName = prefixFor s (s & getEncoderLocation) <> c.constructorName
@@ -502,7 +503,7 @@ constructorBranchHelper s@(DatatypeStructure{}) c =
             -- Anonymous fields
             (("p" <>) . Text.pack . show @Integer) <$> take nFields [0 ..]
 
-multipleConstructorBranches :: DatatypeStructure x -> [Constructor] -> Text
+multipleConstructorBranches :: GenerationSpec x -> [Constructor] -> Text
 multipleConstructorBranches structure constructors =
     let prefix = (prefixFor structure (structure & getEncoderLocation))
      in (if all isNullary constructors then encodeStringTags prefix ((.constructorName) <$> constructors) else encodeTaggedBranches structure constructors)
@@ -512,7 +513,7 @@ encodeStringTags prefix cnames =
     Text.intercalate "\n" $
         (\cname -> prefix <> cname <> " -> Json.Encode.string \"" <> cname <> "\"") <$> cnames
 
-encodeTaggedBranches :: DatatypeStructure x -> [Constructor] -> Text
+encodeTaggedBranches :: GenerationSpec x -> [Constructor] -> Text
 encodeTaggedBranches ds cs = Text.intercalate "\n" $ mkTagBranch <$> cs
   where
     mkTagBranch c =
@@ -535,7 +536,7 @@ encodeTaggedBranches ds cs = Text.intercalate "\n" $ mkTagBranch <$> cs
               [ ( "tag", Json.Encode.string "$tag" )$contentsField]
           |]
 
-encoderForType :: DatatypeStructure x -> TyRef -> Text
+encoderForType :: GenerationSpec x -> TyRef -> Text
 encoderForType ds TyRef{..} =
     case tyCon of
         TyVar varName -> "e" <> Text.tail varName -- Won't have args (No HKTs)
@@ -552,9 +553,9 @@ encoderForType ds TyRef{..} =
          in "(" <> Text.intercalate " " (encoderName : paramEncoders) <> ")"
 
 --
-data SomeStructure = forall x. SomeStructure (DatatypeStructure x)
-include :: forall {k} x. (HasElmStructure k x) => SomeStructure
-include = SomeStructure $ getElmStructure @x
+data SomeGenerationSpec = forall x. SomeGenerationSpec (GenerationSpec x)
+include :: forall {k} x. (HasGenerationSpec k x) => SomeGenerationSpec
+include = SomeGenerationSpec $ getGenerationSpec @x
 
 data ModuleDefinition = ModuleDefinition
     { imports :: Set ModuleName
@@ -575,12 +576,12 @@ instance Semigroup ModuleDefinition where
 instance Monoid ModuleDefinition where
     mempty = ModuleDefinition mempty mempty mempty mempty
 
-generateAll :: FilePath -> [SomeStructure] -> IO ()
+generateAll :: FilePath -> [SomeGenerationSpec] -> IO ()
 generateAll baseDir ds = do
     let srcMap = mkSourceMap ds
     traverse_ (outputModule baseDir) $ Map.toAscList srcMap
 
-mkSourceMap :: [SomeStructure] -> Map ModuleName Text
+mkSourceMap :: [SomeGenerationSpec] -> Map ModuleName Text
 mkSourceMap ds = Map.mapWithKey renderModule $ computeAll ds
 
 outputModule :: FilePath -> (ModuleName, Text) -> IO ()
@@ -621,12 +622,12 @@ renderModule mName ModuleDefinition{..} =
     decodersSrc = Text.intercalate "\n\n" decoders
     importsSrc = Text.unlines $ ("import " <>) <$> (Set.toAscList imports)
 
-computeAll :: [SomeStructure] -> Map ModuleName ModuleDefinition
+computeAll :: [SomeGenerationSpec] -> Map ModuleName ModuleDefinition
 computeAll = foldl' addToModules Map.empty . mconcat . fmap mkModuleDefs
   where
     addToModules modules (mName, def) =
         Map.insertWith (<>) mName def modules
-    mkModuleDefs (SomeStructure ds) =
+    mkModuleDefs (SomeGenerationSpec ds) =
         let constructorImports = Set.fromList $ mconcat $ getImports <$> ds.constructors
             typeImport = Set.fromList $ toList ds.mapping.moduleName
          in catMaybes

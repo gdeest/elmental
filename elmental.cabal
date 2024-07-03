@@ -7,8 +7,10 @@ version:            0.1.0.2
 license:            BSD-3-Clause
 synopsis: Generate Elm datatype definitions, encoders and decoders from Haskell datatypes.
 
-description: Elmental is a code generator that takes in Haskell type definitions and generates Elm datatypes, along with Aeson-compatible encoders and decoders.
-             It emphasizes flexibility, support for a large number of Haskell types, and integration into existing Elm codebases.
+description: Elmental is a code generator that converts Haskell type definitions
+             into Elm datatypes. It also creates Aeson-compatible encoders and decoders. The
+             tool is designed for flexibility, supports a wide range of haskell types, and
+             integrates seamlessly with existing elm codebases.
 
 homepage:           https://github.com/gdeest/elmental
 author:             Gaël Deest
@@ -48,7 +50,8 @@ library
     default-language: GHC2021
 
     exposed-modules:  Elmental
-                      Elmental.ElmStructure
+                      Elmental.Extract
+                      Elmental.GenerationSpec
                       Elmental.Generate
  
     build-depends:    base >=4.16.4.0 && < 5.0,

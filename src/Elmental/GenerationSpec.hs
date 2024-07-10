@@ -34,10 +34,6 @@ data ElmMapping = ElmMapping
     -- ^ Arguments supplied to the type constructor.
     , isTypeAlias :: Bool
     -- ^ Indicates whether the generated Elm datataype should be a type alias
-    , urlPiece :: Maybe SymbolLocation
-    -- ^ Location of the URL piece builder / parser for this type.
-    , queryParam :: Maybe SymbolLocation
-    -- ^ Location of the query param builder / parser for this type.
     }
     deriving (Eq, Show, Ord)
 

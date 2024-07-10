@@ -505,8 +505,6 @@ instance ElmDeclarable Int where
                         }
             , args = []
             , isTypeAlias = False
-            , urlPiece = Nothing
-            , queryParam = Nothing
             }
 
 instance ElmDeclarable Text where
@@ -528,8 +526,6 @@ instance ElmDeclarable Text where
                         }
             , args = []
             , isTypeAlias = False
-            , urlPiece = Nothing
-            , queryParam = Nothing
             }
 
 instance ElmDeclarable [Char] where
@@ -557,8 +553,6 @@ instance ElmDeclarable Bool where
                         }
             , args = []
             , isTypeAlias = False
-            , urlPiece = Nothing
-            , queryParam = Nothing
             }
 
 instance ElmDeclarable Maybe where
@@ -580,8 +574,6 @@ instance ElmDeclarable Maybe where
                         }
             , args = []
             , isTypeAlias = False
-            , urlPiece = Nothing
-            , queryParam = Nothing
             }
 
 instance ElmDeclarable Either where
@@ -606,8 +598,6 @@ instance ElmDeclarable [] where
                         }
             , args = []
             , isTypeAlias = False
-            , urlPiece = Nothing
-            , queryParam = Nothing
             }
 
 instance ElmDeclarable (Form 'Submission) where

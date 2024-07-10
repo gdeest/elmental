@@ -151,8 +151,6 @@ defaultMapping =
                     }
         , args = []
         , isTypeAlias = False
-        , urlPiece = Nothing
-        , queryParam = Nothing
         }
   where
     tName = symbolToText @(GetTypeNameG (RepK x))

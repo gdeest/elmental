@@ -17,8 +17,6 @@ GenerationSpec
                 }
         , args = []
         , isTypeAlias = False
-        , urlPiece = Nothing
-        , queryParam = Nothing
         }
   , nParams = 0
   , constructors =
@@ -42,8 +40,6 @@ GenerationSpec
                                     { symbolName = "bool" , symbolModuleName = "Json.Decode" }
                             , args = []
                             , isTypeAlias = False
-                            , urlPiece = Nothing
-                            , queryParam = Nothing
                             }
                     , tyArgs = []
                     }
@@ -72,8 +68,6 @@ GenerationSpec
                                     { symbolName = "nullable" , symbolModuleName = "Json.Decode" }
                             , args = []
                             , isTypeAlias = False
-                            , urlPiece = Nothing
-                            , queryParam = Nothing
                             }
                     , tyArgs =
                         [ TyRef
@@ -96,8 +90,6 @@ GenerationSpec
                                             }
                                     , args = []
                                     , isTypeAlias = False
-                                    , urlPiece = Nothing
-                                    , queryParam = Nothing
                                     }
                             , tyArgs = []
                             }

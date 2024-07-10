@@ -17,8 +17,6 @@ GenerationSpec
                 }
         , args = []
         , isTypeAlias = False
-        , urlPiece = Nothing
-        , queryParam = Nothing
         }
   , nParams = 0
   , constructors =
@@ -46,8 +44,6 @@ GenerationSpec
                                     }
                             , args = []
                             , isTypeAlias = False
-                            , urlPiece = Nothing
-                            , queryParam = Nothing
                             }
                     , tyArgs =
                         [ TyRef
@@ -70,8 +66,6 @@ GenerationSpec
                                             }
                                     , args = []
                                     , isTypeAlias = False
-                                    , urlPiece = Nothing
-                                    , queryParam = Nothing
                                     }
                             , tyArgs = []
                             }
@@ -99,8 +93,6 @@ GenerationSpec
                                     }
                             , args = []
                             , isTypeAlias = False
-                            , urlPiece = Nothing
-                            , queryParam = Nothing
                             }
                     , tyArgs = []
                     }

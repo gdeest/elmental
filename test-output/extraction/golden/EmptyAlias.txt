@@ -17,8 +17,6 @@ GenerationSpec
                 }
         , args = []
         , isTypeAlias = True
-        , urlPiece = Nothing
-        , queryParam = Nothing
         }
   , nParams = 0
   , constructors =

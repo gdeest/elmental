@@ -22,14 +22,12 @@ Key features that set Elmental apart include:
 
 === Basic Usage
 
-To get this to work, you'll need
+You need
 [kind-generics](https://hackage.haskell.org/package/kind-generics) and
 [kind-generics-th](https://hackage.haskell.org/package/kind-generics-th) added
 as dependencies in your `.cabal` file.
 
-==== 1) Derive 'Generics.Kind.GenericK'
-
-This will usually be done using TemplateHaskell.
+==== 1) Define your DTO and derive 'Generics.Kind.GenericK'
 
 @
   {-# LANGUAGE FlexibleInstances #-}
@@ -50,33 +48,17 @@ This will usually be done using TemplateHaskell.
   deriveGenericK ''MyDTO
 @
 
-==== 2) Declare your type as 'ElmDeclarable'
+==== 2) Define its Elm Mapping
 
 @
   import Elmental
 
   instance ElmDeclarable MyDTO
-@
-
-If you're fine with module and type names staying exactly the same in Elm,
-that's about all you need to do as that's exactly what the default mapping does.
-Otherwise, feel free to modify it. A typical use-case might be to disable the
-generation of the encoder or the decoder:
-
-
-@
-{-# LANGUAGE TypeApplications#-}
-
-import Elmental
-
-instance ElmDeclarable MyDTO where
-  mapTo = defaultMapping @MyDTO { encoderLocation = Nothing }
+    mapTo = defaultMapping @MyDTO
+      { moduleName = Just "CustomModuleName" }
 @
 
 ==== 3) Generate the code !
-
-Add an executable to your Cabal file that depends on your library and
-@elmental@, and write its @main@ function like this:
 
 @
   {-# LANGUAGE TypeApplications #-}
